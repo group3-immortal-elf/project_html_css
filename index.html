@@ -1,121 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- icon -->
-    <script
-      src="https://kit.fontawesome.com/20da3996d8.js"
-      crossorigin="anonymous"
-    ></script>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<!-- icon -->
+		<script
+			src="https://kit.fontawesome.com/20da3996d8.js"
+			crossorigin="anonymous"
+		></script>
 
-    <!-- font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+		<!-- font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
 
-    <!-- set default style -->
-    <style type="text/tailwindcss">
-      @layer base {
-        h1 {
-          @apply text-5xl;
-        }
-        h2 {
-          @apply text-4xl;
-        }
-        h3 {
-          @apply text-2xl;
-        }
-        h1,
-        h2,
-        h3 {
-          @apply font-semibold;
-        }
-        img {
-          @apply w-full;
-        }
-        :hover {
-          @apply transition duration-300 ease-in-out;
-        }
-      }
-    </style>
+		<!-- set default style -->
+		<style type="text/tailwindcss">
+			@layer base {
+				h1 {
+					@apply text-5xl;
+					@apply font-semibold;
+				}
+				h2 {
+					@apply text-4xl;
+					@apply font-semibold;
+					@apply text-center;
+				}
+				h3 {
+					@apply text-2xl;
+					@apply font-semibold;
+				}
+				img {
+					@apply w-full;
+					@apply object-cover;
+				}
+				picture {
+					@apply overflow-hidden;
+				}
+				:hover {
+					@apply transition duration-300;
+				}
+				* {
+					@apply duration-300;
+				}
+			}
+		</style>
 
-    <title>Elviro</title>
-  </head>
+		<title>Elviro</title>
+		<link
+			rel="shortcut icon"
+			href="images/elviro logo.svg"
+			type="image/x-icon"
+		/>
+	</head>
 
-  <body class="font-[Montserrat] text-neutral-700">
-    <!-- This is header. -->
-    <header class="text-xl">
-      <!-- main nav -->
-      <nav class="flex justify-between items-center px-5 h-16">
-        <!-- for mobile -->
-        <a class="flex" href="#">
-          <picture></picture>
-          <h3>Elviro</h3>
-        </a>
-        <nav class="sm:hidden">
-          <ul class="flex gap-5">
-            <li>
-              <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
-            </li>
-            <li>
-              <a href=""><i class="fa-solid fa-bars"></i></a>
-            </li>
-            <li class="hidden">
-              <a href=""><i class="fa-solid fa-xmark"></i></a>
-            </li>
-          </ul>
-        </nav>
+	<body class="font-[Montserrat] text-neutral-700 text-lg">
+		<!-- This is header. -->
+		<header class="text-xl">
+			<!-- main nav -->
+			<nav class="flex justify-between items-center px-5 h-16">
+				<a class="flex items-center gap-4" href="index.html">
+					<picture class="w-12"
+						><img src="images/elviro logo.svg" alt="Logo"
+					/></picture>
+					<h3>Elviro</h3>
+				</a>
 
-        <!-- for desktop -->
-        <nav class="hidden sm:flex h-full w-full">
-          <ul class="flex justify-center h-full w-full">
-            <li class="h-full hover:bg-[#B5C18E]">
-              <a class="flex justify-center items-center h-full px-6" href="">
-                Room
-              </a>
-            </li>
-            <li class="h-full hover:bg-[#B5C18E]">
-              <a class="flex justify-center items-center h-full px-6" href=""
-                >Product</a
-              >
-            </li>
-            <li class="h-full hover:bg-[#B5C18E]">
-              <a class="flex justify-center items-center h-full px-6" href=""
-                >About Us</a
-              >
-            </li>
-          </ul>
-        </nav>
+				<!-- for mobile -->
+				<nav class="md:hidden">
+					<ul class="flex gap-5">
+						<li>
+							<a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+						</li>
+						<li>
+							<a href=""><i class="fa-solid fa-bars"></i></a>
+						</li>
+						<li class="hidden">
+							<a href=""><i class="fa-solid fa-xmark"></i></a>
+						</li>
+					</ul>
+				</nav>
 
-        <!-- icon -->
-        <nav class="hidden sm:flex">
-          <ul class="flex gap-6">
-            <li>
-              <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
-            </li>
-            <li>
-              <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
-            </li>
-            <li>
-              <a href=""><i class="fa-regular fa-heart"></i></a>
-            </li>
-            <li>
-              <a href=""><i class="fa-regular fa-user"></i></a>
-            </li>
-          </ul>
-        </nav>
-      </nav>
-    </header>
+				<!-- for desktop -->
+				<nav class="hidden md:flex h-full w-full">
+					<ul class="flex justify-center h-full w-full">
+						<li class="h-full hover:bg-[#B5C18E]">
+							<a class="flex justify-center items-center h-full px-6" href="">
+								Room
+							</a>
+						</li>
+						<li class="h-full hover:bg-[#B5C18E]">
+							<a class="flex justify-center items-center h-full px-6" href=""
+								>Product</a
+							>
+						</li>
+						<li class="h-full hover:bg-[#B5C18E]">
+							<a class="flex justify-center items-center h-full px-6" href=""
+								>About Us</a
+							>
+						</li>
+					</ul>
+				</nav>
 
-    <!-- This is main section. -->
-    <main></main>
+				<!-- icon -->
+				<nav class="hidden md:flex">
+					<ul class="flex gap-6">
+						<li>
+							<a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+						</li>
+						<li>
+							<a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+						</li>
+						<li>
+							<a href=""><i class="fa-regular fa-heart"></i></a>
+						</li>
+						<li>
+							<a href=""><i class="fa-regular fa-user"></i></a>
+						</li>
+					</ul>
+				</nav>
+			</nav>
+		</header>
 
-    <!-- This is footer. -->
-    <footer></footer>
-  </body>
+		<!-- This is main section. -->
+		<main>
+			<!-- Hero section -->
+			<section class="relative">
+				<picture>
+					<img
+						class="h-[500px]"
+						src="images/Cart-hero-image 1.png"
+						alt="Banner"
+					/>
+				</picture>
+				<article
+					class="absolute top-0 flex flex-col justify-center gap-4 p-8 bg-black/50 w-full md:bg-[#B5C18E] md:top-auto md:bottom-10 md:right-10 md:w-2/5 md:min-h-1/2 md:rounded-3xl"
+				>
+					<h1 class="text-[#B5C18E] md:text-neutral-700">
+						Discover Our New Collection
+					</h1>
+					<p class="hidden md:flex text-xl">
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+					</p>
+					<a
+						class="hidden md:flex justify-center bg-orange-100 p-3 w-1/2 text-xl font-semibold hover:bg-orange-200"
+						href=""
+						>Buy Now</a
+					>
+				</article>
+			</section>
+
+			<!-- Room section -->
+			<section class="flex flex-col items-center gap-6 p-6 md:p-12">
+				<h2>Browse The Room</h2>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+				<div
+					class="flex gap-8 w-full p-3 pb-8 overflow-x-scroll md:overflow-auto"
+				>
+					<a class="flex flex-col items-center gap-4 min-w-52" href="">
+						<picture
+							class="rounded-3xl hover:shadow-[0_0_10px_1px_rgb(150,150,150)]"
+						>
+							<img src="images/Cart-hero-image 1.png" alt="Bedroom" />
+						</picture>
+						<h3>Bedroom</h3>
+					</a>
+					<a class="flex flex-col items-center gap-4 min-w-52" href="">
+						<picture
+							class="rounded-3xl hover:shadow-[0_0_10px_1px_rgb(150,150,150)]"
+						>
+							<img src="images/Cart-hero-image 1.png" alt="Living Room" />
+						</picture>
+						<h3>Living Room</h3>
+					</a>
+					<a class="flex flex-col items-center gap-4 min-w-52" href="">
+						<picture
+							class="rounded-3xl hover:shadow-[0_0_10px_1px_rgb(150,150,150)]"
+						>
+							<img src="images/Cart-hero-image 1.png" alt="Kitchen" />
+						</picture>
+						<h3>Kitchen</h3>
+					</a>
+				</div>
+			</section>
+
+			<!-- Product section -->
+			<section></section>
+		</main>
+
+		<!-- This is footer. -->
+		<footer></footer>
+	</body>
 </html>
