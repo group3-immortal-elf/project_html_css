@@ -23,41 +23,55 @@
 			@layer base {
 				h1 {
 					@apply text-5xl;
+					@apply font-semibold;
 				}
 				h2 {
 					@apply text-4xl;
+					@apply font-semibold;
+					@apply text-center;
 				}
 				h3 {
 					@apply text-2xl;
-				}
-				h1,
-				h2,
-				h3 {
 					@apply font-semibold;
 				}
 				img {
 					@apply w-full;
+					@apply object-cover;
+				}
+				picture {
+					@apply overflow-hidden;
 				}
 				:hover {
-					@apply transition duration-300 ease-in-out;
+					@apply transition duration-300;
+				}
+				* {
+					@apply duration-300;
 				}
 			}
 		</style>
 
-		<title>Elviro | Cart</title>
+		<title>Elviro</title>
+		<link
+			rel="shortcut icon"
+			href="images/elviro logo.svg"
+			type="image/x-icon"
+		/>
 	</head>
 
-	<body class="font-[Montserrat] text-neutral-700">
+	<body class="font-[Montserrat] text-neutral-700 text-lg">
 		<!-- This is header. -->
 		<header class="text-xl">
 			<!-- main nav -->
 			<nav class="flex justify-between items-center px-5 h-16">
-				<!-- for mobile -->
-				<a class="flex" href="#">
-					<picture></picture>
+				<a class="flex items-center gap-4" href="index.html">
+					<picture class="w-12">
+						<img src="images/elviro logo.svg" alt="Logo" />
+					</picture>
 					<h3>Elviro</h3>
 				</a>
-				<nav class="sm:hidden">
+
+				<!-- for mobile -->
+				<nav class="md:hidden">
 					<ul class="flex gap-5">
 						<li>
 							<a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
@@ -72,7 +86,7 @@
 				</nav>
 
 				<!-- for desktop -->
-				<nav class="hidden sm:flex h-full w-full">
+				<nav class="hidden md:flex h-full w-full">
 					<ul class="flex justify-center h-full w-full">
 						<li class="h-full hover:bg-[#B5C18E]">
 							<a class="flex justify-center items-center h-full px-6" href="">
@@ -93,13 +107,13 @@
 				</nav>
 
 				<!-- icon -->
-				<nav class="hidden sm:flex">
+				<nav class="hidden md:flex">
 					<ul class="flex gap-6">
 						<li>
 							<a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
 						</li>
 						<li>
-							<a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+							<a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
 						</li>
 						<li>
 							<a href=""><i class="fa-regular fa-heart"></i></a>
@@ -115,16 +129,14 @@
 		<!-- This is main section. -->
 		<main>
 			<section id="hero">
-				<div>
-					<div><img src="/images/Cart-hero-image 1.png" /></div>
-					<div><img src="/images/elviro logo.svg" /></div>
-					<div><h1>Cart</h1></div>
-					<div>Home > crat</div>
-				</div>
+				<picture><img src="images/Cart-hero-image 1.png" /></picture>
+				<h1>Cart</h1>
+				<p>Home > crat</p>
 			</section>
+
 			<section id="cart_description">
 				<div>
-					<img src="/images/cart-image.png" />
+					<picture><img src="images/cart-image.png" /></picture>
 					<div>
 						<div>
 							<h2>Here’s your cart list.</h2>
@@ -137,6 +149,7 @@
 					</div>
 				</div>
 			</section>
+
 			<section id="cart_item">
 				<div>
 					<div>
