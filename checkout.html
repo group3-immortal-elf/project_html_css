@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- icon -->
+    <script
+      src="https://kit.fontawesome.com/20da3996d8.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- set default style -->
+    <style type="text/tailwindcss">
+      @layer base {
+        h1 {
+          @apply text-5xl;
+        }
+        h2 {
+          @apply text-4xl;
+        }
+        h3 {
+          @apply text-2xl;
+        }
+        h1,
+        h2,
+        h3 {
+          @apply font-semibold;
+        }
+        img {
+          @apply w-full;
+        }
+        :hover {
+          @apply transition duration-300 ease-in-out;
+        }
+      }
+    </style>
+
+    <title>Elviro</title>
+  </head>
+
+  <body class="font-[Montserrat] text-neutral-700">
+    <!-- This is header. -->
+    <header class="text-xl">
+      <!-- main nav -->
+      <nav class="flex justify-between items-center px-5 h-16">
+        <!-- for mobile -->
+        <a class="flex" href="#">
+          <picture></picture>
+          <h3>Elviro</h3>
+        </a>
+        <nav class="sm:hidden">
+          <ul class="flex gap-5">
+            <li>
+              <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-solid fa-bars"></i></a>
+            </li>
+            <li class="hidden">
+              <a href=""><i class="fa-solid fa-xmark"></i></a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- for desktop -->
+        <nav class="hidden sm:flex h-full w-full">
+          <ul class="flex justify-center h-full w-full">
+            <li class="h-full hover:bg-[#B5C18E]">
+              <a class="flex justify-center items-center h-full px-6" href="">
+                Room
+              </a>
+            </li>
+            <li class="h-full hover:bg-[#B5C18E]">
+              <a class="flex justify-center items-center h-full px-6" href=""
+                >Product</a
+              >
+            </li>
+            <li class="h-full hover:bg-[#B5C18E]">
+              <a class="flex justify-center items-center h-full px-6" href=""
+                >About Us</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <!-- icon -->
+        <nav class="hidden sm:flex">
+          <ul class="flex gap-6">
+            <li>
+              <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-regular fa-heart"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-regular fa-user"></i></a>
+            </li>
+          </ul>
+        </nav>
+      </nav>
+    </header>
+
+    <!-- This is main section. -->
+    <main></main>
+
+    <!-- This is footer. -->
+    <footer></footer>
+  </body>
+</html>
