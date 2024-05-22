@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -51,7 +51,7 @@
     <!-- This is header. -->
     <header class="text-xl">
       <!-- main nav -->
-      <nav class="flex justify-between items-center px-5 h-16">
+      <nav class="flex h-16 items-center justify-between px-5">
         <!-- for mobile -->
         <a class="flex" href="#">
           <picture></picture>
@@ -72,20 +72,20 @@
         </nav>
 
         <!-- for desktop -->
-        <nav class="hidden sm:flex h-full w-full">
-          <ul class="flex justify-center h-full w-full">
+        <nav class="hidden h-full w-full sm:flex">
+          <ul class="flex h-full w-full justify-center">
             <li class="h-full hover:bg-[#B5C18E]">
-              <a class="flex justify-center items-center h-full px-6" href="">
+              <a class="flex h-full items-center justify-center px-6" href="">
                 Room
               </a>
             </li>
             <li class="h-full hover:bg-[#B5C18E]">
-              <a class="flex justify-center items-center h-full px-6" href=""
+              <a class="flex h-full items-center justify-center px-6" href=""
                 >Product</a
               >
             </li>
             <li class="h-full hover:bg-[#B5C18E]">
-              <a class="flex justify-center items-center h-full px-6" href=""
+              <a class="flex h-full items-center justify-center px-6" href=""
                 >About Us</a
               >
             </li>
@@ -116,20 +116,36 @@
     <main>
       <section id="hero">
         <div>
-          <div><img src="/images/Cart-hero-image 1.png"></div>
-          <div><img src="/images/elviro logo.svg"></div>
+          <div>
+            <img
+              class="h-48 w-96 object-scale-down"
+              src="/images/Cart-hero-image 1.png"
+            />
+          </div>
+          <div>
+            <img
+              class="h-48 w-96 object-scale-down"
+              src="/images/elviro logo.svg"
+            />
+          </div>
           <div><h1>Cart</h1></div>
           <div>Home > crat</div>
         </div>
       </section>
       <section id="cart_description">
         <div>
-          <img src="/images/cart-image.png">
+          <img
+            class="h-48 w-96 object-scale-down"
+            src="/images/cart-image.png"
+          />
           <div>
             <div>
               <h2>Here’s your cart list.</h2>
               <h3>Check your items well before checkout.</h3>
-              <p>All items will include tax of 7% Shipping fee will be included. Free shipping of 1000 Baht purchase after tax.</p>
+              <p>
+                All items will include tax of 7% Shipping fee will be included.
+                Free shipping of 1000 Baht purchase after tax.
+              </p>
             </div>
           </div>
         </div>
@@ -137,15 +153,72 @@
       <section id="cart_item">
         <div>
           <div>
-            <div>table of item</div>
-            <div>cart tatal</div>
+            <div>
+              <table class="min-w-full table-auto text-center">
+                <thead
+                  class="border border-neutral-200 bg-orange-300 text-center"
+                >
+                  <tr>
+                    <th scope="col" class="">Product</th>
+                    <th scope="col" class="">Price</th>
+                    <th scope="col" class="">Quanlity</th>
+                    <th scope="col" class="">Subtatol</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border border-neutral-200 text-center">
+                    <td><h3>SUNNERSTA</h3></td>
+                    <td>999 THB</td>
+                    <td>1</td>
+                    <td>999 THB</td>
+                  </tr>
+                  <tr class="border border-neutral-200 text-center">
+                    <td><h3>SUNNERSTA</h3></td>
+                    <td>999 THB</td>
+                    <td>1</td>
+                    <td>999 THB</td>
+                  </tr>
+                  <tr class="border border-neutral-200 text-center">
+                    <td><h3>SUNNERSTA</h3></td>
+                    <td>999 THB</td>
+                    <td>1</td>
+                    <td>999 THB</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="bg-orange-100 text-center">
+              <h3>cart Totals</h3>
+              <div>
+                <p>Subtotal</p>
+                <p>999 Bath</p>
+              </div>
+              <div>
+                <p>7% Tax</p>
+                <p>70 Bath</p>
+              </div>
+              <div>
+                <p>Delivery fee</p>
+                <p>0 Bath</p>
+              </div>
+              <div>
+                <p>Total</p>
+                <p>1,069 Bath</p>
+              </div>
+              <button class="rounded-lg bg-orange-600 px-14 py-4">
+                Check out
+              </button>
+            </div>
           </div>
+
+          <div>
+            <h3>Missing any items? continue <span>shopping</span></h3>
+          </div>
+
+          <!-- This is footer. -->
+          <footer></footer>
         </div>
       </section>
-      <div><h3>Missing any items? continue <span>shopping</span></h3></div>
     </main>
-
-    <!-- This is footer. -->
-    <footer></footer>
   </body>
 </html>
