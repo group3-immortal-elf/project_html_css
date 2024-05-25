@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -23,55 +23,41 @@
 			@layer base {
 				h1 {
 					@apply text-5xl;
-					@apply font-semibold;
 				}
 				h2 {
 					@apply text-4xl;
-					@apply font-semibold;
-					@apply text-center;
 				}
 				h3 {
 					@apply text-2xl;
+				}
+				h1,
+				h2,
+				h3 {
 					@apply font-semibold;
 				}
 				img {
 					@apply w-full;
-					@apply object-cover;
-				}
-				picture {
-					@apply overflow-hidden;
 				}
 				:hover {
-					@apply transition duration-300;
-				}
-				* {
-					@apply duration-300;
+					@apply transition duration-300 ease-in-out;
 				}
 			}
 		</style>
 
 		<title>Elviro</title>
-		<link
-			rel="shortcut icon"
-			href="images/elviro logo.svg"
-			type="image/x-icon"
-		/>
 	</head>
 
-	<body class="font-[Montserrat] text-neutral-700 text-lg">
+	<body class="font-[Montserrat] text-neutral-700">
 		<!-- This is header. -->
 		<header class="text-xl">
 			<!-- main nav -->
 			<nav class="flex justify-between items-center px-5 h-16">
-				<a class="flex items-center gap-4" href="index.html">
-					<picture class="w-12">
-						<img src="images/elviro logo.svg" alt="Logo" />
-					</picture>
+				<!-- for mobile -->
+				<a class="flex" href="#">
+					<picture></picture>
 					<h3>Elviro</h3>
 				</a>
-
-				<!-- for mobile -->
-				<nav class="md:hidden">
+				<nav class="sm:hidden">
 					<ul class="flex gap-5">
 						<li>
 							<a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
@@ -86,7 +72,7 @@
 				</nav>
 
 				<!-- for desktop -->
-				<nav class="hidden md:flex h-full w-full">
+				<nav class="hidden sm:flex h-full w-full">
 					<ul class="flex justify-center h-full w-full">
 						<li class="h-full hover:bg-[#B5C18E]">
 							<a class="flex justify-center items-center h-full px-6" href="">
@@ -107,13 +93,13 @@
 				</nav>
 
 				<!-- icon -->
-				<nav class="hidden md:flex">
+				<nav class="hidden sm:flex">
 					<ul class="flex gap-6">
 						<li>
 							<a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
 						</li>
 						<li>
-							<a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+							<a href=""><i class="fa-solid fa-cart-shopping"></i></a>
 						</li>
 						<li>
 							<a href=""><i class="fa-regular fa-heart"></i></a>
@@ -128,40 +114,53 @@
 
 		<!-- This is main section. -->
 		<main>
-			<section id="hero">
-				<picture><img src="images/Cart-hero-image 1.png" /></picture>
-				<h1>Cart</h1>
-				<p>Home > crat</p>
+			<section id="banner">
+				<img
+					class="object-cover h-[500px]"
+					src="./images/Cart-hero-image 1.png"
+				/>
+				<h1></h1>
 			</section>
 
-			<section id="cart_description">
-				<div>
-					<picture><img src="images/cart-image.png" /></picture>
-					<div>
-						<div>
-							<h2>Here’s your cart list.</h2>
-							<h3>Check your items well before checkout.</h3>
-							<p>
-								All items will include tax of 7% Shipping fee will be included.
-								Free shipping of 1000 Baht purchase after tax.
-							</p>
-						</div>
+			<section id="product" class="ml-[96px] mt-[66px]">
+				<div id="product-image">
+					<div id="big=product" class="bg-zinc-200 h-[576px] w-[576px]">
+						<img src="" alt="main" />
 					</div>
-				</div>
-			</section>
 
-			<section id="cart_item">
-				<div>
-					<div>
-						<div>table of item</div>
-						<div>cart tatal</div>
-					</div>
+          <div class="flex">
+            <div id="big=product" class="bg-zinc-200 h-[116px] w-[116px]">
+              <img src="" alt="main" />
+            </div>
+            <div id="big=product" class="bg-zinc-200 h-[116px] w-[116px]">
+              <img src="" alt="main" />
+            </div>
+            <div id="big=product" class="bg-zinc-200 h-[116px] w-[116px]">
+              <img src="" alt="main" />
+            </div>
+            <div id="big=product" class="bg-zinc-200 h-[116px] w-[116px]">
+              <img src="" alt="main" />
+            </div>
 				</div>
+
+				<div id="product-about">
+          <h3>Name</h3>
+            <h4>Price</h4>
+            <h4>Description</h4>
+            <h4>Size</h4>
+            <h4>Color</h4>
+
+            <h5>SKU   : SS001</h5>
+            <h5>Tags   : Sofa, Chair, Home, Shop</h5>
+
+        </div>
 			</section>
-			<div>
-				<h3>Missing any items? continue <span>shopping</span></h3>
-			</div>
+        <h2>Description</h2>
+
+			<section id=""></section>
 		</main>
+
+		<h2>tryyyyyyyyyysdsdsds</h2>
 
 		<!-- This is footer. -->
 		<footer></footer>
