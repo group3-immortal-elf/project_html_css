@@ -1,10 +1,9 @@
-<!DOCTYPE html>
+!<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script src="script.js" defer></script>
-
+		<script src="https://cdn.tailwindcss.com"></script>
 		<!-- icon -->
 		<script
 			src="https://kit.fontawesome.com/20da3996d8.js"
@@ -19,516 +18,88 @@
 			rel="stylesheet"
 		/>
 
-		<!-- tailwind and set default style -->
-		<script src="https://cdn.tailwindcss.com"></script>
+		<!-- set default style -->
 		<style type="text/tailwindcss">
 			@layer base {
 				h1 {
 					@apply text-5xl;
-					@apply font-semibold;
 				}
 				h2 {
 					@apply text-4xl;
-					@apply font-semibold;
-					@apply text-center;
 				}
 				h3 {
 					@apply text-2xl;
+				}
+				h1,
+				h2,
+				h3 {
 					@apply font-semibold;
 				}
 				img {
 					@apply w-full;
-					@apply object-cover;
-				}
-				picture {
-					@apply overflow-hidden;
 				}
 				:hover {
-					@apply transition duration-300;
-				}
-				* {
-					@apply duration-300;
+					@apply transition duration-300 ease-in-out;
 				}
 			}
 		</style>
 
 		<title>Elviro</title>
-		<link
-			rel="shortcut icon"
-			href="images/elviro logo.svg"
-			type="image/x-icon"
-		/>
 	</head>
 
-	<body class="font-[Montserrat] text-neutral-700 text-lg bg-white">
+	<body class="font-[Montserrat] text-neutral-700">
 		<!-- This is header. -->
 		<header class="text-xl">
+			<!-- main nav -->
 			<nav class="flex justify-between items-center px-5 h-16">
-				<!-------------------- logo -------------------->
-				<a class="flex items-center gap-4" href="index.html">
-					<picture class="w-12"
-						><img src="images/elviro logo.svg" alt="Logo"
-					/></picture>
+				<!-- for mobile -->
+				<a class="flex" href="#">
+					<picture></picture>
 					<h3>Elviro</h3>
 				</a>
-
-				<!-------------------- mobile nav -------------------->
-				<!-- main -->
-				<nav class="md:hidden">
-					<ul class="flex items-center gap-5">
+				<nav class="sm:hidden">
+					<ul class="flex gap-5">
 						<li>
-							<button><i class="fa-solid fa-magnifying-glass"></i></button>
+							<a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
 						</li>
-						<li id="mobile-toggle-open" class="">
-							<button onclick="showNav('sub-mobile-nav'), toggleMobileNav()">
-								<i class="fa-solid fa-bars"></i>
-							</button>
+						<li>
+							<a href=""><i class="fa-solid fa-bars"></i></a>
 						</li>
-						<li id="mobile-toggle-close" class="text-2xl w-[17.5px] hidden">
-							<button onclick="showNav('sub-mobile-nav'), toggleMobileNav()">
-								<i class="fa-solid fa-xmark"></i>
-							</button>
+						<li class="hidden">
+							<a href=""><i class="fa-solid fa-xmark"></i></a>
 						</li>
 					</ul>
 				</nav>
 
-				<!-- sub -->
-				<nav
-					id="sub-mobile-nav"
-					class="absolute top-16 left-0 z-50 w-full hidden"
-				>
-					<ul class="w-full bg-white text-center">
-						<li class="border-b">
-							<button onclick="showNav('room-nav')" class="w-full p-3">
-								Rooms
-							</button>
-						</li>
-						<ul id="room-nav" class="hidden bg-neutral-100">
-							<li class="border-b">
-								<a href="shop.html" class="block w-full p-3">All Rooms</a>
-							</li>
-							<li class="border-b">
-								<a href="shop.html" class="block w-full p-3">BedRoom</a>
-							</li>
-							<li class="border-b">
-								<a href="shop.html" class="block w-full p-3">Living Room</a>
-							</li>
-							<li class="border-b">
-								<a href="shop.html" class="block w-full p-3">Kitchen</a>
-							</li>
-						</ul>
-
-						<li class="border-b">
-							<button onclick="showNav('product-nav')" class="w-full p-3">
-								Products
-							</button>
-						</li>
-						<ul id="product-nav" class="hidden bg-neutral-100">
-							<li class="border-b">
-								<a href="shop.html" class="block w-full p-3">All Products</a>
-							</li>
-							<li class="border-b">
-								<a href="shop.html" class="block w-full p-3">Beds</a>
-							</li>
-							<li class="border-b">
-								<a href="shop.html" class="block w-full p-3">Chairs</a>
-							</li>
-							<li class="border-b">
-								<a href="shop.html" class="block w-full p-3">Shelves</a>
-							</li>
-							<li class="border-b">
-								<a href="shop.html" class="block w-full p-3">Tables</a>
-							</li>
-							<li class="border-b">
-								<a href="shop.html" class="block w-full p-3">Closets</a>
-							</li>
-						</ul>
-
-						<li class="border-b">
-							<a href="cart.html" class="block w-full p-3">Cart</a>
-						</li>
-						<li class="border-b">
-							<a href="" class="block w-full p-3">Log In</a>
-						</li>
-						<li class="border-b">
-							<a href="about.html" class="block w-full p-3">About Us</a>
-						</li>
-					</ul>
-				</nav>
-
-				<!-------------------- desktop nav -------------------->
-				<nav class="hidden md:flex h-full w-full">
+				<!-- for desktop -->
+				<nav class="hidden sm:flex h-full w-full">
 					<ul class="flex justify-center h-full w-full">
-						<!-- room -->
 						<li class="h-full hover:bg-[#B5C18E]">
-							<a
-								href="shop.html"
-								class="flex justify-center items-center h-full px-6"
-								onmouseenter="showNav('sub-room')"
-								onmouseleave="showNav('sub-room')"
-							>
+							<a class="flex justify-center items-center h-full px-6" href="">
 								Room
 							</a>
-							<nav
-								id="sub-room"
-								class="hidden absolute top-16 left-0 z-50 w-full"
-							>
-								<ul
-									class="flex justify-center gap-32 bg-white px-14 py-6 m-auto w-fit border"
-									onmouseenter="showNav('sub-room')"
-									onmouseleave="showNav('sub-room')"
-								>
-									<li class="flex flex-col gap-4">
-										<a
-											href="shop.html"
-											class="font-semibold border-b border-neutral-300 hover:text-[#939d73]"
-										>
-											Bedroom
-										</a>
-										<ul class="flex flex-col gap-4">
-											<li>
-												<a
-													href="shop.html"
-													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
-												>
-													Beds
-												</a>
-											</li>
-											<li>
-												<a
-													href="shop.html"
-													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
-												>
-													Bedside Tables
-												</a>
-											</li>
-											<li>
-												<a
-													href="shop.html"
-													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
-												>
-													Wardrobes
-												</a>
-											</li>
-											<li>
-												<a
-													href="shop.html"
-													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
-												>
-													Drawers
-												</a>
-											</li>
-											<li>
-												<a
-													href="shop.html"
-													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
-												>
-													Dressing Tables
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li class="flex flex-col gap-4">
-										<a
-											href="shop.html"
-											class="font-semibold border-b border-neutral-300 hover:text-[#939d73]"
-										>
-											Living Room
-										</a>
-										<ul class="flex flex-col gap-4">
-											<li>
-												<a
-													href="shop.html"
-													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
-												>
-													Sofas
-												</a>
-											</li>
-											<li>
-												<a
-													href="shop.html"
-													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
-												>
-													TV Benches
-												</a>
-											</li>
-											<li>
-												<a
-													href="shop.html"
-													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
-												>
-													Coffee Tables
-												</a>
-											</li>
-											<li>
-												<a
-													href="shop.html"
-													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
-												>
-													Bookcases
-												</a>
-											</li>
-											<li>
-												<a
-													href="shop.html"
-													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
-												>
-													Cabinets
-												</a>
-											</li>
-											<li>
-												<a
-													href="shop.html"
-													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
-												>
-													Desks
-												</a>
-											</li>
-											<li>
-												<a
-													href="shop.html"
-													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
-												>
-													Shoe Cabinets
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li class="flex flex-col gap-4">
-										<a
-											href="shop.html"
-											class="font-semibold border-b border-neutral-300 hover:text-[#939d73]"
-										>
-											Kitchen
-										</a>
-										<ul class="flex flex-col gap-4">
-											<li>
-												<a
-													href="shop.html"
-													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
-												>
-													Dining Tables
-												</a>
-											</li>
-										</ul>
-									</li>
-								</ul>
-							</nav>
 						</li>
-
-						<!-- product -->
 						<li class="h-full hover:bg-[#B5C18E]">
-							<a
-								href="shop.html"
-								class="flex justify-center items-center h-full px-6"
-								onmouseenter="showNav('sub-product')"
-								onmouseleave="showNav('sub-product')"
+							<a class="flex justify-center items-center h-full px-6" href=""
+								>Product</a
 							>
-								Product
-							</a>
-							<nav
-								id="sub-product"
-								class="hidden absolute top-16 left-0 z-50 w-full"
-								onmouseenter="showNav('sub-product')"
-								onmouseleave="showNav('sub-product')"
-							>
-								<ul
-									class="flex justify-center gap-32 bg-white px-14 py-6 m-auto w-fit border"
-								>
-									<li class="flex flex-col gap-4">
-										<a
-											href="shop.html"
-											class="font-semibold border-b border-neutral-300 hover:text-[#939d73]"
-										>
-											Beds
-										</a>
-										<ul class="flex flex-col gap-4">
-											<li>
-												<a
-													href="shop.html"
-													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
-												>
-													Beds
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li class="flex flex-col gap-4">
-										<a
-											href="shop.html"
-											class="font-semibold border-b border-neutral-300 hover:text-[#939d73]"
-										>
-											Tables
-										</a>
-										<ul class="flex flex-col gap-4">
-											<li>
-												<a
-													href="shop.html"
-													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
-												>
-													Bedside Tables
-												</a>
-											</li>
-											<li>
-												<a
-													href="shop.html"
-													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
-												>
-													Dressing Tables
-												</a>
-											</li>
-											<li>
-												<a
-													href="shop.html"
-													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
-												>
-													Coffee Tables
-												</a>
-											</li>
-											<li>
-												<a
-													href="shop.html"
-													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
-												>
-													Desks
-												</a>
-											</li>
-											<li>
-												<a
-													href="shop.html"
-													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
-												>
-													Dining Table
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li class="flex flex-col gap-4">
-										<a
-											href="shop.html"
-											class="font-semibold border-b border-neutral-300 hover:text-[#939d73]"
-										>
-											Chairs
-										</a>
-										<ul class="flex flex-col gap-4">
-											<li>
-												<a
-													href="shop.html"
-													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
-												>
-													Sofa
-												</a>
-											</li>
-											<li>
-												<a
-													href="shop.html"
-													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
-												>
-													Dining Chairs
-												</a>
-											</li>
-											<li>
-												<a
-													href="shop.html"
-													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
-												>
-													Desk Chairs
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li class="flex flex-col gap-4">
-										<a
-											href="shop.html"
-											class="font-semibold border-b border-neutral-300 hover:text-[#939d73]"
-										>
-											Cabinets
-										</a>
-										<ul class="flex flex-col gap-4">
-											<li>
-												<a
-													href="shop.html"
-													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
-												>
-													Wardrobes
-												</a>
-											</li>
-											<li>
-												<a
-													href="shop.html"
-													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
-												>
-													Drawers
-												</a>
-											</li>
-											<li>
-												<a
-													href="shop.html"
-													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
-												>
-													TV Benches
-												</a>
-											</li>
-											<li>
-												<a
-													href="shop.html"
-													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
-												>
-													Shoe Cabinets
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li class="flex flex-col gap-4">
-										<a
-											href="shop.html"
-											class="font-semibold border-b border-neutral-300 hover:text-[#939d73]"
-										>
-											Shelves
-										</a>
-										<ul class="flex flex-col gap-4">
-											<li>
-												<a
-													href="shop.html"
-													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
-												>
-													Bookcases
-												</a>
-											</li>
-											<li>
-												<a
-													href="shop.html"
-													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
-												>
-													Cabinets
-												</a>
-											</li>
-										</ul>
-									</li>
-								</ul>
-							</nav>
 						</li>
-
-						<!-- about -->
 						<li class="h-full hover:bg-[#B5C18E]">
-							<a
-								href="about.html"
-								class="flex justify-center items-center h-full px-6"
+							<a class="flex justify-center items-center h-full px-6" href=""
+								>About Us</a
 							>
-								About Us
-							</a>
 						</li>
 					</ul>
 				</nav>
 
-				<!-- desktop icon nav -->
-				<nav class="hidden md:flex">
+				<!-- icon -->
+				<nav class="hidden sm:flex">
 					<ul class="flex gap-6">
 						<li>
-							<button><i class="fa-solid fa-magnifying-glass"></i></button>
+							<a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
 						</li>
 						<li>
-							<a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+							<a href=""><i class="fa-solid fa-cart-shopping"></i></a>
 						</li>
 						<li>
 							<a href=""><i class="fa-regular fa-heart"></i></a>
@@ -557,34 +128,34 @@
 						<img src="" alt="main" />
 					</div>
 
-					<div class="flex">
-						<div id="big=product" class="bg-zinc-200 h-[116px] w-[116px]">
-							<img src="" alt="main" />
-						</div>
-						<div id="big=product" class="bg-zinc-200 h-[116px] w-[116px]">
-							<img src="" alt="main" />
-						</div>
-						<div id="big=product" class="bg-zinc-200 h-[116px] w-[116px]">
-							<img src="" alt="main" />
-						</div>
-						<div id="big=product" class="bg-zinc-200 h-[116px] w-[116px]">
-							<img src="" alt="main" />
-						</div>
-					</div>
-
-					<div id="product-about">
-						<h3>Name</h3>
-						<h4>Price</h4>
-						<h4>Description</h4>
-						<h4>Size</h4>
-						<h4>Color</h4>
-
-						<h5>SKU : SS001</h5>
-						<h5>Tags : Sofa, Chair, Home, Shop</h5>
-					</div>
+          <div class="flex">
+            <div id="big=product" class="bg-zinc-200 h-[116px] w-[116px]">
+              <img src="" alt="main" />
+            </div>
+            <div id="big=product" class="bg-zinc-200 h-[116px] w-[116px]">
+              <img src="" alt="main" />
+            </div>
+            <div id="big=product" class="bg-zinc-200 h-[116px] w-[116px]">
+              <img src="" alt="main" />
+            </div>
+            <div id="big=product" class="bg-zinc-200 h-[116px] w-[116px]">
+              <img src="" alt="main" />
+            </div>
 				</div>
+
+				<div id="product-about">
+          <h3>Name</h3>
+            <h4>Price</h4>
+            <h4>Description</h4>
+            <h4>Size</h4>
+            <h4>Color</h4>
+
+            <h5>SKU   : SS001</h5>
+            <h5>Tags   : Sofa, Chair, Home, Shop</h5>
+
+        </div>
 			</section>
-			<h2>Description</h2>
+        <h2>Description</h2>
 
 			<section id=""></section>
 		</main>
