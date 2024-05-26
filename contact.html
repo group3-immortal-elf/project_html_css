@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="script.js" defer></script>
+
+		<!-- icon -->
+		<script
+			src="https://kit.fontawesome.com/20da3996d8.js"
+			crossorigin="anonymous"
+		></script>
+
+		<!-- font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- tailwind and set default style -->
+		<script src="https://cdn.tailwindcss.com"></script>
+		<style type="text/tailwindcss">
+			@layer base {
+				h1 {
+					@apply text-5xl;
+					@apply font-semibold;
+				}
+				h2 {
+					@apply text-4xl;
+					@apply font-semibold;
+					@apply text-center;
+				}
+				h3 {
+					@apply text-2xl;
+					@apply font-semibold;
+				}
+				img {
+					@apply w-full;
+					@apply object-cover;
+				}
+				picture {
+					@apply overflow-hidden;
+				}
+				:hover {
+					@apply transition duration-300;
+				}
+				* {
+					@apply duration-300;
+				}
+			}
+		</style>
+
+		<title>Elviro</title>
+		<link
+			rel="shortcut icon"
+			href="images/elviro logo.svg"
+			type="image/x-icon"
+		/>
+	</head>
+
+	<body class="font-[Montserrat] text-neutral-700 text-lg bg-white">
+		<!-- This is header. -->
+		<header class="text-xl">
+			<nav class="flex justify-between items-center px-5 h-16">
+				<!-------------------- logo -------------------->
+				<a class="flex items-center gap-4" href="index.html">
+					<picture class="w-12"
+						><img src="images/elviro logo.svg" alt="Logo"
+					/></picture>
+					<h3>Elviro</h3>
+				</a>
+
+				<!-------------------- mobile nav -------------------->
+				<!-- main -->
+				<nav class="md:hidden">
+					<ul class="flex items-center gap-5">
+						<li>
+							<button><i class="fa-solid fa-magnifying-glass"></i></button>
+						</li>
+						<li id="mobile-toggle-open" class="">
+							<button onclick="showNav('sub-mobile-nav'), toggleMobileNav()">
+								<i class="fa-solid fa-bars"></i>
+							</button>
+						</li>
+						<li id="mobile-toggle-close" class="text-2xl w-[17.5px] hidden">
+							<button onclick="showNav('sub-mobile-nav'), toggleMobileNav()">
+								<i class="fa-solid fa-xmark"></i>
+							</button>
+						</li>
+					</ul>
+				</nav>
+
+				<!-- sub -->
+				<nav
+					id="sub-mobile-nav"
+					class="absolute top-16 left-0 z-50 w-full hidden"
+				>
+					<ul class="w-full bg-white text-center">
+						<li class="border-b">
+							<button onclick="showNav('room-nav')" class="w-full p-3">
+								Rooms
+							</button>
+						</li>
+						<ul id="room-nav" class="hidden bg-neutral-100">
+							<li class="border-b">
+								<a href="shop.html" class="block w-full p-3">All Rooms</a>
+							</li>
+							<li class="border-b">
+								<a href="shop.html" class="block w-full p-3">BedRoom</a>
+							</li>
+							<li class="border-b">
+								<a href="shop.html" class="block w-full p-3">Living Room</a>
+							</li>
+							<li class="border-b">
+								<a href="shop.html" class="block w-full p-3">Kitchen</a>
+							</li>
+						</ul>
+
+						<li class="border-b">
+							<button onclick="showNav('product-nav')" class="w-full p-3">
+								Products
+							</button>
+						</li>
+						<ul id="product-nav" class="hidden bg-neutral-100">
+							<li class="border-b">
+								<a href="shop.html" class="block w-full p-3">All Products</a>
+							</li>
+							<li class="border-b">
+								<a href="shop.html" class="block w-full p-3">Beds</a>
+							</li>
+							<li class="border-b">
+								<a href="shop.html" class="block w-full p-3">Chairs</a>
+							</li>
+							<li class="border-b">
+								<a href="shop.html" class="block w-full p-3">Shelves</a>
+							</li>
+							<li class="border-b">
+								<a href="shop.html" class="block w-full p-3">Tables</a>
+							</li>
+							<li class="border-b">
+								<a href="shop.html" class="block w-full p-3">Closets</a>
+							</li>
+						</ul>
+
+						<li class="border-b">
+							<a href="cart.html" class="block w-full p-3">Cart</a>
+						</li>
+						<li class="border-b">
+							<a href="" class="block w-full p-3">Log In</a>
+						</li>
+						<li class="border-b">
+							<a href="about.html" class="block w-full p-3">About Us</a>
+						</li>
+					</ul>
+				</nav>
+
+				<!-------------------- desktop nav -------------------->
+				<nav class="hidden md:flex h-full w-full">
+					<ul class="flex justify-center h-full w-full">
+						<!-- room -->
+						<li class="h-full hover:bg-[#B5C18E]">
+							<a
+								href="shop.html"
+								class="flex justify-center items-center h-full px-6"
+								onmouseenter="showNav('sub-room')"
+								onmouseleave="showNav('sub-room')"
+							>
+								Room
+							</a>
+							<nav
+								id="sub-room"
+								class="hidden absolute top-16 left-0 z-50 w-full"
+							>
+								<ul
+									class="flex justify-center gap-32 bg-white px-14 py-6 m-auto w-fit border"
+									onmouseenter="showNav('sub-room')"
+									onmouseleave="showNav('sub-room')"
+								>
+									<li class="flex flex-col gap-4">
+										<a
+											href="shop.html"
+											class="font-semibold border-b border-neutral-300 hover:text-[#939d73]"
+										>
+											Bedroom
+										</a>
+										<ul class="flex flex-col gap-4">
+											<li>
+												<a
+													href="shop.html"
+													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
+												>
+													Beds
+												</a>
+											</li>
+											<li>
+												<a
+													href="shop.html"
+													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
+												>
+													Bedside Tables
+												</a>
+											</li>
+											<li>
+												<a
+													href="shop.html"
+													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
+												>
+													Wardrobes
+												</a>
+											</li>
+											<li>
+												<a
+													href="shop.html"
+													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
+												>
+													Drawers
+												</a>
+											</li>
+											<li>
+												<a
+													href="shop.html"
+													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
+												>
+													Dressing Tables
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li class="flex flex-col gap-4">
+										<a
+											href="shop.html"
+											class="font-semibold border-b border-neutral-300 hover:text-[#939d73]"
+										>
+											Living Room
+										</a>
+										<ul class="flex flex-col gap-4">
+											<li>
+												<a
+													href="shop.html"
+													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
+												>
+													Sofas
+												</a>
+											</li>
+											<li>
+												<a
+													href="shop.html"
+													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
+												>
+													TV Benches
+												</a>
+											</li>
+											<li>
+												<a
+													href="shop.html"
+													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
+												>
+													Coffee Tables
+												</a>
+											</li>
+											<li>
+												<a
+													href="shop.html"
+													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
+												>
+													Bookcases
+												</a>
+											</li>
+											<li>
+												<a
+													href="shop.html"
+													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
+												>
+													Cabinets
+												</a>
+											</li>
+											<li>
+												<a
+													href="shop.html"
+													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
+												>
+													Desks
+												</a>
+											</li>
+											<li>
+												<a
+													href="shop.html"
+													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
+												>
+													Shoe Cabinets
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li class="flex flex-col gap-4">
+										<a
+											href="shop.html"
+											class="font-semibold border-b border-neutral-300 hover:text-[#939d73]"
+										>
+											Kitchen
+										</a>
+										<ul class="flex flex-col gap-4">
+											<li>
+												<a
+													href="shop.html"
+													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
+												>
+													Dining Tables
+												</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+						</li>
+
+						<!-- product -->
+						<li class="h-full hover:bg-[#B5C18E]">
+							<a
+								href="shop.html"
+								class="flex justify-center items-center h-full px-6"
+								onmouseenter="showNav('sub-product')"
+								onmouseleave="showNav('sub-product')"
+							>
+								Product
+							</a>
+							<nav
+								id="sub-product"
+								class="hidden absolute top-16 left-0 z-50 w-full"
+								onmouseenter="showNav('sub-product')"
+								onmouseleave="showNav('sub-product')"
+							>
+								<ul
+									class="flex justify-center gap-32 bg-white px-14 py-6 m-auto w-fit border"
+								>
+									<li class="flex flex-col gap-4">
+										<a
+											href="shop.html"
+											class="font-semibold border-b border-neutral-300 hover:text-[#939d73]"
+										>
+											Beds
+										</a>
+										<ul class="flex flex-col gap-4">
+											<li>
+												<a
+													href="shop.html"
+													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
+												>
+													Beds
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li class="flex flex-col gap-4">
+										<a
+											href="shop.html"
+											class="font-semibold border-b border-neutral-300 hover:text-[#939d73]"
+										>
+											Tables
+										</a>
+										<ul class="flex flex-col gap-4">
+											<li>
+												<a
+													href="shop.html"
+													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
+												>
+													Bedside Tables
+												</a>
+											</li>
+											<li>
+												<a
+													href="shop.html"
+													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
+												>
+													Dressing Tables
+												</a>
+											</li>
+											<li>
+												<a
+													href="shop.html"
+													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
+												>
+													Coffee Tables
+												</a>
+											</li>
+											<li>
+												<a
+													href="shop.html"
+													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
+												>
+													Desks
+												</a>
+											</li>
+											<li>
+												<a
+													href="shop.html"
+													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
+												>
+													Dining Table
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li class="flex flex-col gap-4">
+										<a
+											href="shop.html"
+											class="font-semibold border-b border-neutral-300 hover:text-[#939d73]"
+										>
+											Chairs
+										</a>
+										<ul class="flex flex-col gap-4">
+											<li>
+												<a
+													href="shop.html"
+													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
+												>
+													Sofa
+												</a>
+											</li>
+											<li>
+												<a
+													href="shop.html"
+													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
+												>
+													Dining Chairs
+												</a>
+											</li>
+											<li>
+												<a
+													href="shop.html"
+													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
+												>
+													Desk Chairs
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li class="flex flex-col gap-4">
+										<a
+											href="shop.html"
+											class="font-semibold border-b border-neutral-300 hover:text-[#939d73]"
+										>
+											Cabinets
+										</a>
+										<ul class="flex flex-col gap-4">
+											<li>
+												<a
+													href="shop.html"
+													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
+												>
+													Wardrobes
+												</a>
+											</li>
+											<li>
+												<a
+													href="shop.html"
+													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
+												>
+													Drawers
+												</a>
+											</li>
+											<li>
+												<a
+													href="shop.html"
+													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
+												>
+													TV Benches
+												</a>
+											</li>
+											<li>
+												<a
+													href="shop.html"
+													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
+												>
+													Shoe Cabinets
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li class="flex flex-col gap-4">
+										<a
+											href="shop.html"
+											class="font-semibold border-b border-neutral-300 hover:text-[#939d73]"
+										>
+											Shelves
+										</a>
+										<ul class="flex flex-col gap-4">
+											<li>
+												<a
+													href="shop.html"
+													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
+												>
+													Bookcases
+												</a>
+											</li>
+											<li>
+												<a
+													href="shop.html"
+													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
+												>
+													Cabinets
+												</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+						</li>
+
+						<!-- about -->
+						<li class="h-full hover:bg-[#B5C18E]">
+							<a
+								href="about.html"
+								class="flex justify-center items-center h-full px-6"
+							>
+								About Us
+							</a>
+						</li>
+					</ul>
+				</nav>
+
+				<!-- desktop icon nav -->
+				<nav class="hidden md:flex">
+					<ul class="flex gap-6">
+						<li>
+							<button><i class="fa-solid fa-magnifying-glass"></i></button>
+						</li>
+						<li>
+							<a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+						</li>
+						<li>
+							<a href=""><i class="fa-regular fa-heart"></i></a>
+						</li>
+						<li>
+							<a href=""><i class="fa-regular fa-user"></i></a>
+						</li>
+					</ul>
+				</nav>
+			</nav>
+		</header>
+
+		<!-- This is main section. -->
+		<main>
+			<!-- Hero section -->
+			<section class="relative">
+				<picture>
+					<img
+						class="h-[500px]"
+						src="images/Cart-hero-image 1.png"
+						alt="Banner"
+					/>
+				</picture>
+				<article
+					class="absolute top-40 flex left-0 right-0 flex-col items-center justify-center gap-4 p-8"
+				>
+					<h1 class="text-[#B5C18E] md:text-neutral-700">Contact Us</h1>
+					<a
+						href="index.html"
+						class="hidden md:flex justify-center bg-orange-100 p-3 w-1/2 text-xl font-semibold hover:bg-orange-200"
+					>
+						Home > Contact
+					</a>
+				</article>
+			</section>
+
+			<!-- Contact section -->
+			<section>
+				<div class="flex">
+					<div class="w-1/3">
+						<picture>
+							<img
+								class="rounded-full"
+								src="images/elviro logo.svg"
+								alt="Banner"
+							/>
+						</picture>
+					</div>
+					<div class="w-2/3">
+						<h2>Get In Touch With Us</h2>
+						<p>
+							For More Information About Our Product & Services. Please Feel
+							Free To Drop Us An Email. Our Staff Always Be There To Help You
+							Out. Do Not Hesitate!
+						</p>
+					</div>
+				</div>
+				<section class="flex px-10 py-10 gap-3">
+					<div class="w-1/3">
+						<div>
+							<i class="fa-solid fa-location-dot"></i>
+							<div>
+								<h3>address</h3>
+								<p>Bangkae, Bangkok, Thailand</p>
+							</div>
+						</div>
+						<div>
+							<i class="fa-solid fa-phone"></i>
+							<h3>Phone</h3>
+							<p>Mobile: +(66) xx-xxx-xxxx</p>
+							<p>Hotline: +(84) 456-6789</p>
+						</div>
+						<div>
+							<i class="fa-regular fa-clock"></i>
+							<h3>Working Time</h3>
+							<p>Monday-Friday: 9:00 - 22:00</p>
+							<p>Saturday-Sunday: 9:00 - 21:00</p>
+						</div>
+					</div>
+					<div class="w-2/3 pb-4">
+						<form class="flex flex-col gap-4">
+							<div class="flex flex-col">
+								<label>Your Name</label>
+								<input
+									class="px-1 py-2 border-2 border-slate-200 rounded"
+									type="text"
+									id="name"
+									name="firstname"
+									placeholder="Your Name"
+								/>
+							</div>
+							<div class="flex flex-col">
+								<label>Email Address</label>
+								<input
+									class="px-1 py-2 border-2 border-slate-200 rounded"
+									type="email"
+									id="email"
+									name="email"
+									placeholder="abc@def.com"
+								/>
+							</div>
+							<div class="flex flex-col">
+								<label>Subject</label>
+								<input
+									class="px-1 py-2 border-2 border-slate-200 rounded"
+									type="text"
+									id="subject"
+									name="subject"
+									placeholder="This is optional"
+								/>
+							</div>
+							<div class="flex flex-col">
+								<label>Message</label>
+								<textarea
+									class="px-1 py-2 border-2 border-slate-200 rounded dark:placeholder-gray-400"
+									id="message"
+									rows="4"
+									placeholder="Hi, I'd like to ask about"
+								>
+								</textarea>
+							</div>
+							<button class="bg-orange-600 py-1 w-40 rounded text-white">
+								Submit
+							</button>
+						</form>
+					</div>
+				</section>
+			</section>
+		</main>
+
+		<!-- This is footer. -->
+		<footer
+			class="flex flex-col gap-4 p-4 md:py-8 md:px-20 border-t border-[#B5C18E]"
+		>
+			<div class="hidden md:flex gap-36">
+				<ul class="flex flex-col gap-8">
+					<li><h3>Elviro.</h3></li>
+					<li class="text-neutral-400">Bangkok, Thailand</li>
+				</ul>
+
+				<ul class="flex flex-col gap-4">
+					<li class="text-neutral-400 mb-4">Links</li>
+					<li class="hover:text-[#939d73] hover:underline decoration-[#939d73]">
+						<a href="index.html">Home</a>
+					</li>
+					<li class="hover:text-[#939d73] hover:underline decoration-[#939d73]">
+						<a href="shop.html">Shop</a>
+					</li>
+					<li class="hover:text-[#939d73] hover:underline decoration-[#939d73]">
+						<a href="about.html">About</a>
+					</li>
+					<li class="hover:text-[#939d73] hover:underline decoration-[#939d73]">
+						<a href="">Contact</a>
+					</li>
+				</ul>
+
+				<ul class="flex flex-col gap-4">
+					<li class="text-neutral-400 mb-4">Help</li>
+					<li class="hover:text-[#939d73] hover:underline decoration-[#939d73]">
+						<a href="index.html">Payment Options</a>
+					</li>
+					<li class="hover:text-[#939d73] hover:underline decoration-[#939d73]">
+						<a href="shop.html">Returns</a>
+					</li>
+					<li class="hover:text-[#939d73] hover:underline decoration-[#939d73]">
+						<a href="about.html">Privacy Policies</a>
+					</li>
+				</ul>
+
+				<ul class="lg:flex flex-col gap-4 hidden">
+					<li class="text-neutral-400 mb-1">Newsletter</li>
+					<li>
+						<form class="flex flex-col xl:flex-row items-start gap-4">
+							<input
+								type="email"
+								placeholder="Enter Your Email Address"
+								class="border-b border-neutral-700 text-base w-60 text-ellipsis"
+							/>
+							<button
+								type="submit"
+								class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
+							>
+								SUBSCRIBE
+							</button>
+						</form>
+					</li>
+				</ul>
+			</div>
+			<p>&copy; 2024 Elviro. All rights reserved.</p>
+		</footer>
+	</body>
+</html>
