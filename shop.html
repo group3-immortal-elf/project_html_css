@@ -63,7 +63,9 @@
 	<body class="font-[Montserrat] text-neutral-700 text-lg bg-white">
 		<!-------------------- header -------------------->
 		<header class="text-xl">
-			<nav class="flex justify-between items-center px-5 h-16 border-b">
+			<nav
+				class="flex justify-between items-center px-5 h-16 border-b bg-white"
+			>
 				<!-------------------- logo -------------------->
 				<a class="flex items-center gap-4" href="index.html">
 					<picture class="w-12"
@@ -98,6 +100,10 @@
 					class="absolute top-16 left-0 z-50 w-full hidden"
 				>
 					<ul class="w-full bg-white text-center">
+						<li class="border-b">
+							<a href="shop.html" class="block w-full p-3">For Kids</a>
+						</li>
+
 						<li class="border-b">
 							<button onclick="showNav('room-nav')" class="w-full p-3">
 								Room
@@ -156,6 +162,16 @@
 				<!-------------------- desktop nav -------------------->
 				<nav class="hidden md:flex h-full w-full">
 					<ul class="flex justify-center h-full w-full">
+						<!-- for kid -->
+						<li class="h-full hover:bg-[#B5C18E]">
+							<a
+								href="shop.html"
+								class="flex justify-center items-center h-full px-6"
+							>
+								For Kids
+							</a>
+						</li>
+
 						<!-- room -->
 						<li class="h-full hover:bg-[#B5C18E]">
 							<a
@@ -530,9 +546,6 @@
 							<a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
 						</li>
 						<li>
-							<a href=""><i class="fa-regular fa-heart"></i></a>
-						</li>
-						<li>
 							<a href=""><i class="fa-regular fa-user"></i></a>
 						</li>
 					</ul>
@@ -885,7 +898,7 @@
 
 			<!-- buttom bar -->
 			<section
-				class="hidden lg:flex justify-center items-center bg-[#B5C18E]/60 h-28 gap-10 px-16"
+				class="hidden lg:flex justify-center items-center bg-[#B5C18E]/60 h-fit gap-10 px-16 py-6"
 			>
 				<div class="flex align-center">
 					<i class="fa-solid fa-trophy text-4xl my-auto mr-4"></i>
