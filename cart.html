@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -543,37 +543,104 @@
 
 		<!-- This is main section. -->
 		<main>
-			<section id="hero">
-				<picture><img src="images/Cart-hero-image 1.png" /></picture>
-				<h1>Cart</h1>
-				<p>Home > cart</p>
+			<!-- Hero section -->
+			<section class="relative">
+				<picture>
+					<img
+						class="h-[300px]"
+						src="images/Cart-hero-image 1.png"
+						alt="Banner"
+					/>
+				</picture>
+				<article
+					class="absolute top-20 flex left-0 right-0 flex-col items-center justify-center gap-4 p-8"
+				>
+					<h1 class="text-[#B5C18E] md:text-neutral-700">Cart</h1>
+					<a
+						href="index.html"
+						class="hidden md:flex justify-center bg-orange-100 p-3 w-1/2 text-xl font-semibold hover:bg-orange-200"
+					>
+						Home > Cart
+					</a>
+				</article>
 			</section>
 
 			<section id="cart_description">
-				<div>
-					<picture><img src="images/cart-image.png" /></picture>
+				<div class="flex align-middle">
+					<picture>
+						<img class="max-[60]" src="images/cart-image.png" />
+					</picture>
 					<div>
-						<div>
-							<h2>Here’s your cart list.</h2>
-							<h3>Check your items well before checkout.</h3>
-							<p>
-								All items will include tax of 7% Shipping fee will be included.
-								Free shipping of 1000 Baht purchase after tax.
-							</p>
-						</div>
+						<h2 class="text-left text-3xl">Here’s your cart list.</h2>
+						<h3>Check your items well before checkout.</h3>
+						<p>
+							All items will include
+							<span class="font-bold">tax of 7%</span> Shipping fee will be
+							included. Free shipping of
+							<span class="font-bold">1000 Baht</span> purchase after tax.
+						</p>
 					</div>
 				</div>
 			</section>
 
 			<section id="cart_item">
-				<div>
-					<div>
-						<div>table of item</div>
-						<div>cart tatal</div>
+				<div class="flex">
+					<div class="basis-2/3 px-8">
+						<table class="table-fixed w-full text-center">
+							<thead class="bg-orange-300">
+								<tr>
+									<th class=""></th>
+									<th>Product</th>
+									<th>Price</th>
+									<th>Quanlity</th>
+									<th>Subtatal</th>
+									<th class=""></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><img class="max-h-20" src="images/cart-image.png" /></td>
+									<td>PÄRUP sofa</td>
+									<td>999 Baht</td>
+									<td class="bg-slate-200">1</td>
+									<td>999 Baht</td>
+									<td><i class="fa-solid fa-trash"></i></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="basis-1/3">
+						<div class="bg-orange-200 px-4 py-6 rounded-lg">
+							<h3 class="text-center">Cart Totals</h3>
+							<div class="flex justify-between px-2">
+								<p class="text-base text-left font-semibold">Cart Totals</p>
+								<p class="text-base">999 Baht</p>
+							</div>
+							<div class="flex justify-between px-2">
+								<p class="text-base text-left font-semibold">7% Tax</p>
+								<p class="text-base">70 Baht</p>
+							</div>
+							<div class="flex justify-between px-2">
+								<p class="text-base font-semibold">Delivery</p>
+								<p class="text-base">0 Baht</p>
+							</div>
+							<br />
+							<div class="flex justify-between px-2">
+								<p class="text-base font-semibold">Total</p>
+								<p class="text-base">1069 Baht</p>
+							</div>
+							<div class="flex justify-center pt-6">
+								<button
+									class="bg-yellow-700 text-white rounded-md text-base px-2 py-1"
+								>
+									Check Out
+								</button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
-			<div>
+			<div class="text-center py-10">
 				<h3>Missing any items? continue <span>shopping</span></h3>
 			</div>
 		</main>
