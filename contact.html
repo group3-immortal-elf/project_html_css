@@ -547,15 +547,19 @@
 			<section class="relative">
 				<picture>
 					<img
-						class="h-[500px]"
+						class="h-[200px] md:h-[300px]"
 						src="images/Cart-hero-image 1.png"
 						alt="Banner"
 					/>
 				</picture>
 				<article
-					class="absolute top-40 flex left-0 right-0 flex-col items-center justify-center gap-4 p-8"
+					class="absolute top-14 flex left-0 right-0 flex-col items-center justify-center gap-2"
 				>
-					<h1 class="text-[#B5C18E] md:text-neutral-700">Contact Us</h1>
+					<img
+						class="size-16 bg-white rounded-full hidden"
+						src="images/elviro logo.svg"
+					/>
+					<h1 class="text-neutral-700">Contact Us</h1>
 					<a
 						href="index.html"
 						class="hidden md:flex justify-center bg-orange-100 p-3 w-1/2 text-xl font-semibold hover:bg-orange-200"
@@ -567,17 +571,17 @@
 
 			<!-- Contact section -->
 			<section>
-				<div class="flex">
-					<div class="w-1/3">
-						<picture>
+				<div class="md:flex">
+					<div class="md:w-1/3">
+						<picture class="flex justify-center py-8">
 							<img
-								class="rounded-full"
-								src="images/elviro logo.svg"
+								class="h-40 w-40 rounded-full"
+								src="images/contact.png"
 								alt="Banner"
 							/>
 						</picture>
 					</div>
-					<div class="w-2/3">
+					<div class="hidden md:w-2/3">
 						<h2>Get In Touch With Us</h2>
 						<p>
 							For More Information About Our Product & Services. Please Feel
@@ -586,29 +590,33 @@
 						</p>
 					</div>
 				</div>
-				<section class="flex px-10 py-10 gap-3">
-					<div class="w-1/3">
+				<section class="w-full md:flex px-10 py-10 gap-3">
+					<div class="flex flex-col md:w-1/3">
 						<div>
-							<i class="fa-solid fa-location-dot"></i>
-							<div>
+							<div class="flex items-center gap-2">
+								<i class="fa-solid fa-location-dot"></i>
 								<h3>address</h3>
-								<p>Bangkae, Bangkok, Thailand</p>
 							</div>
+							<p class="pl-6 pb-10">Bangkae, Bangkok, Thailand</p>
 						</div>
 						<div>
-							<i class="fa-solid fa-phone"></i>
-							<h3>Phone</h3>
-							<p>Mobile: +(66) xx-xxx-xxxx</p>
-							<p>Hotline: +(84) 456-6789</p>
+							<div class="flex items-center gap-2">
+								<i class="fa-solid fa-phone"></i>
+								<h3>Phone</h3>
+							</div>
+							<p class="pl-6">Mobile: +(66) xx-xxx-xxxx</p>
+							<p class="pl-6 pb-10">Hotline: +(84) 456-6789</p>
 						</div>
 						<div>
-							<i class="fa-regular fa-clock"></i>
-							<h3>Working Time</h3>
-							<p>Monday-Friday: 9:00 - 22:00</p>
-							<p>Saturday-Sunday: 9:00 - 21:00</p>
+							<div class="flex items-center gap-2">
+								<i class="fa-regular fa-clock"></i>
+								<h3>Working Time</h3>
+							</div>
+							<p class="pl-6">Monday-Friday: 9:00 - 22:00</p>
+							<p class="pl-6 pb-10">Saturday-Sunday: 9:00 - 21:00</p>
 						</div>
 					</div>
-					<div class="w-2/3 pb-4">
+					<div class="md:w-2/3 pb-4">
 						<form class="flex flex-col gap-4">
 							<div class="flex flex-col">
 								<label>Your Name</label>
