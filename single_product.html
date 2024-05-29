@@ -545,54 +545,48 @@
 		<main class="mx-[94px]">
 			<!------------ product section -------------->
 			<section id="product" class="mt-[66px]">
-				<div class="flex mb-[96px] gap-[96px] justify-evenly">
+				<div
+					class="flex mb-[96px] gap-[96px] flex-col justify-center items-center"
+				>
 					<!------------ image side -------------->
 					<div id="productImage">
-						<div
-							id="bigImage"
-							class="w-[576px] h-[576px] mb-[32px] shadow-xl object-cover"
-						>
-							<img
-								src="./images/sofa_image.png"
-								alt="big image"
-								class="rounded-2xl"
-							/>
-						</div>
+						<div class="w-[576px]">
+							<div
+								id="bigImage"
+								class="h-[576px] mb-[32px] shadow-xl object-cover"
+							>
+								<img
+									src="./images/sofa_image.png"
+									alt="big image"
+									class="rounded-2xl"
+								/>
+							</div>
 
-						<div id="imageRow" class="flex justify-between">
-							<div
-								id="bigImage"
-								class="bg-gray-200 w-[116px] h-[116px] object-cover"
-							>
-								<img src="./images/sofa_image.png" alt="image 01" />
-							</div>
-							<div
-								id="bigImage"
-								class="bg-gray-200 w-[116px] h-[116px] object-cover"
-							>
-								<img src="./images/sofa_02.jpg" alt="image 02" />
-							</div>
-							<div
-								id="bigImage"
-								class="bg-gray-200 w-[116px] h-[116px] object-cover"
-							>
-								<img src="./images/sofa_03.jpg" alt="image 03" />
-							</div>
-							<div
-								id="bigImage"
-								class="bg-gray-200 w-[116px] h-[116px] object-cover"
-							>
-								<img src="./images/sofa_04.jpg" alt="image 04" />
+							<div id="imageRow" class="flex justify-between">
+								<div class="bg-gray-200 w-[116px] h-[116px] object-cover">
+									<img src="./images/sofa_image.png" alt="image 01" />
+								</div>
+								<div class="bg-gray-200 w-[116px] h-[116px] object-cover">
+									<img src="./images/sofa_02.jpg" alt="image 02" />
+								</div>
+								<div class="bg-gray-200 w-[116px] h-[116px] object-cover">
+									<img src="./images/sofa_03.jpg" alt="image 03" />
+								</div>
+								<div class="bg-gray-200 w-[116px] h-[116px] object-cover">
+									<img src="./images/sofa_04.jpg" alt="image 04" />
+								</div>
 							</div>
 						</div>
 					</div>
 
 					<!------------ detail side -------------->
 					<div id="productDetail">
-						<h2 class="mb-[24px]">Comfortable Grey Sofa</h2>
+						<h2 class="mb-[24px]">PARUP sofa</h2>
 						<div class="mb-[61px]">
 							<div id="price" class="font-light mb-[24px]">
-								<h3 class="text-3xl mb-[24px]">Price</h3>
+								<h3 class="text-3xl mb-[24px]">
+									Price<span class="ml-[100px] font-medium">999 Baht</span>
+								</h3>
 								<div class="flex gap-[32px]">
 									<div id="star">
 										<i class="fa-solid fa-star" style="color: #ffd43b"></i>
@@ -611,12 +605,12 @@
 							<div id="description">
 								<h3 class="text-3xl mb-[24px]">Description</h3>
 								<p class="mb-[24px]">
-									Introducing our Comfortable Grey Sofa, blending style and
-									relaxation with plush cushions and durable upholstery for
-									exceptional comfort. Its sleek, modern design in a versatile
-									grey hue complements any decor, ideal for enhancing your
-									living space. Whether lounging, entertaining, or unwinding,
-									our sofa promises a cozy and inviting experience.
+									Introducing our PARUP Sofa, blending style and relaxation with
+									plush cushions and durable upholstery for exceptional comfort.
+									Its sleek, modern design in a versatile grey hue complements
+									any decor, ideal for enhancing your living space. Whether
+									lounging, entertaining, or unwinding, our sofa promises a cozy
+									and inviting experience.
 								</p>
 							</div>
 
@@ -654,24 +648,24 @@
 								</div>
 							</div>
 
-							<div id="addCart">
+							<div id="addCart" class="align-bottom">
 								<input
 									type="number"
 									min="0"
-									class="mr-2 p-2 py-3 text-center border border-gray-400 rounded-lg max-w-[150px]"
+									class="mr-2 p-2 py-3 text-center border border-gray-400 rounded-lg w-1/4"
 									placeholder="1"
 								/>
 								<button
 									id="bt-addCart"
 									type="submit"
-									class="mr-2 px-10 py-3 text-center border border-gray-600 rounded-lg hover:shadow-lg"
+									class="mr-2 px-10 py-3 text-center border border-gray-600 w-1/3 rounded-lg hover:shadow-lg"
 								>
 									Add to Cart
 								</button>
 								<button
 									id="bt-addCart"
 									type="submit"
-									class="mr-2 px-10 py-3 text-center border border-gray-600 rounded-lg hover:shadow-lg"
+									class="mr-2 px-10 py-3 text-center border border-gray-600 w-1/3 rounded-lg hover:shadow-lg"
 								>
 									+ Compare
 								</button>
@@ -696,26 +690,31 @@
 				<hr class="border border-gray-200" />
 			</section>
 
-			<!------------ Description Detail -------------->
-			<section id="description" class="my-[64px]">
-				<div class="flex flex-row justify-center mb-[62px] gap-5 items-end">
-					<h2>Description</h2>
-					<h3>Review [10]</h3>
+			<!------------ Review Detail -------------->
+			<section id="review" class="my-[64px]">
+				<div
+					class="flex flex-row justify-center mb-[62px] gap-5 items-end align-bottom"
+				>
+					<h2>Review</h2>
+					<h3>[10]</h3>
 				</div>
 				<p class="mb-[64px] text-xl">
-					"This Comfortable Grey Sofa exceeded my expectations! The plush
-					cushions are so cozy, and the sleek design fits perfectly in my living
-					room. It's become the go-to spot for relaxing after a long day -
+					"This sofa exceeded my expectations! The plush cushions are so cozy,
+					and the sleek design fits perfectly in my living room. It's become the
+					go-to spot for relaxing after a long day -
 					<b>highly recommend!</b>"
 				</p>
-				<div id="descImage" class="flex justify-center gap-[94px] mb-[64px]">
-					<div class="w-[574px] h-[280px] bg-gray-200">
+				<div
+					id="descImage"
+					class="flex flex-col justify-center items-center gap-[94px] mb-[64px]"
+				>
+					<div class="w-full mx-auto h-[280px] bg-gray-200">
 						<img
 							src="./images/house_01.jpg"
 							class="w-full h-full object-cover"
 						/>
 					</div>
-					<div class="w-[574px] h-[280px] bg-gray-200">
+					<div class=" h-[280px] bg-gray-200">
 						<img
 							src="./images/house_03.jpg"
 							class="w-full h-full object-cover"
@@ -728,8 +727,66 @@
 
 			<!------------ Related Products -------------->
 			<section id="relatedProduct">
-				<div class="flex flex-row justify-center mb-[62px] gap-5 items-end">
+				<div class="mb-[62px] gap-5 items-end">
 					<h2>Related Products</h2>
+					<div class="flex flex-col md:grid md:grid-cols-4 gap-8 p-3">
+						<a href="single_product.html" class="bg-[#b9c590]/80">
+							<picture class="aspect-square">
+								<img
+									src="images/Cart-hero-image 1.png"
+									alt=""
+									class="aspect-square"
+								/>
+							</picture>
+							<article class="flex flex-col gap-2 p-4">
+								<h3>Name</h3>
+								<p>Description</p>
+								<p>Price</p>
+							</article>
+						</a>
+						<a href="single_product.html" class="bg-[#b9c590]/80">
+							<picture class="aspect-square">
+								<img
+									src="images/Cart-hero-image 1.png"
+									alt=""
+									class="aspect-square"
+								/>
+							</picture>
+							<article class="flex flex-col gap-2 p-4">
+								<h3>Name</h3>
+								<p>Description</p>
+								<p>Price</p>
+							</article>
+						</a>
+						<a href="single_product.html" class="bg-[#b9c590]/80">
+							<picture class="aspect-square">
+								<img
+									src="images/Cart-hero-image 1.png"
+									alt=""
+									class="aspect-square"
+								/>
+							</picture>
+							<article class="flex flex-col gap-2 p-4">
+								<h3>Name</h3>
+								<p>Description</p>
+								<p>Price</p>
+							</article>
+						</a>
+						<a href="single_product.html" class="bg-[#b9c590]/80">
+							<picture class="aspect-square">
+								<img
+									src="images/Cart-hero-image 1.png"
+									alt=""
+									class="aspect-square"
+								/>
+							</picture>
+							<article class="flex flex-col gap-2 p-4">
+								<h3>Name</h3>
+								<p>Description</p>
+								<p>Price</p>
+							</article>
+						</a>
+					</div>
 				</div>
 			</section>
 		</main>
