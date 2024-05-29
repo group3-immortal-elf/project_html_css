@@ -60,17 +60,17 @@
 		/>
 	</head>
 
-	<body class="font-[Montserrat] text-neutral-700 text-lg bg-white">
+	<body id="body" class="font-[Montserrat] text-neutral-700 text-lg bg-white">
 		<!-------------------- header -------------------->
-		<header class="text-xl">
+		<header class="text-xl sticky top-0 z-50">
 			<nav
 				class="flex justify-between items-center px-5 h-16 border-b bg-white"
 			>
 				<!-------------------- logo -------------------->
 				<a class="flex items-center gap-4" href="index.html">
-					<picture class="w-12"
-						><img src="images/elviro logo.svg" alt="Logo"
-					/></picture>
+					<picture class="w-12">
+						<img src="images/elviro logo.svg" alt="Logo" />
+					</picture>
 					<h3>Elviro</h3>
 				</a>
 
@@ -111,13 +111,13 @@
 						</li>
 						<ul id="room-nav" class="hidden bg-neutral-100">
 							<li class="border-b">
-								<a href="" class="block w-full p-3">BedRoom</a>
+								<a href="shop.html" class="block w-full p-3">BedRoom</a>
 							</li>
 							<li class="border-b">
-								<a href="" class="block w-full p-3">Living Room</a>
+								<a href="shop.html" class="block w-full p-3">Living Room</a>
 							</li>
 							<li class="border-b">
-								<a href="" class="block w-full p-3">Kitchen</a>
+								<a href="shop.html" class="block w-full p-3">Kitchen</a>
 							</li>
 						</ul>
 
@@ -128,22 +128,22 @@
 						</li>
 						<ul id="product-nav" class="hidden bg-neutral-100">
 							<li class="border-b">
-								<a href="" class="block w-full p-3">All Product</a>
+								<a href="shop.html" class="block w-full p-3">All Product</a>
 							</li>
 							<li class="border-b">
-								<a href="" class="block w-full p-3">Bed</a>
+								<a href="shop.html" class="block w-full p-3">Bed</a>
 							</li>
 							<li class="border-b">
-								<a href="" class="block w-full p-3">Chair</a>
+								<a href="shop.html" class="block w-full p-3">Chair</a>
 							</li>
 							<li class="border-b">
-								<a href="" class="block w-full p-3">Shelf</a>
+								<a href="shop.html" class="block w-full p-3">Shelf</a>
 							</li>
 							<li class="border-b">
-								<a href="" class="block w-full p-3">Table</a>
+								<a href="shop.html" class="block w-full p-3">Table</a>
 							</li>
 							<li class="border-b">
-								<a href="" class="block w-full p-3">Closet</a>
+								<a href="shop.html" class="block w-full p-3">Closet</a>
 							</li>
 						</ul>
 
@@ -166,7 +166,7 @@
 						<li class="h-full hover:bg-[#B5C18E]">
 							<a
 								href="shop.html"
-								class="flex justify-center items-center h-full px-6"
+								class="flex justify-center items-center h-full px-6 hover:text-white"
 							>
 								For Kids
 							</a>
@@ -175,8 +175,8 @@
 						<!-- room -->
 						<li class="h-full hover:bg-[#B5C18E]">
 							<a
-								href=""
-								class="flex justify-center items-center h-full px-6"
+								href="shop.html"
+								class="flex justify-center items-center h-full px-6 hover:text-white"
 								onmouseenter="showNav('sub-room')"
 								onmouseleave="showNav('sub-room')"
 							>
@@ -184,16 +184,17 @@
 							</a>
 							<nav
 								id="sub-room"
-								class="hidden absolute top-16 left-0 z-50 w-full"
+								class="hidden absolute top-16 left-0 z-49 w-full"
 							>
 								<ul
-									class="flex justify-center gap-32 bg-white px-14 py-6 m-auto w-fit"
+									class="flex justify-center gap-32 bg-white px-14 py-6 m-auto w-fit border border-t-0"
 									onmouseenter="showNav('sub-room')"
 									onmouseleave="showNav('sub-room')"
 								>
 									<li class="flex flex-col gap-4">
 										<a
-											href=""
+											href="shop
+											"
 											class="font-semibold border-b border-neutral-300 hover:text-[#939d73]"
 										>
 											Bedroom
@@ -201,7 +202,8 @@
 										<ul class="flex flex-col gap-4">
 											<li>
 												<a
-													href=""
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Beds
@@ -209,7 +211,8 @@
 											</li>
 											<li>
 												<a
-													href=""
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Bedside Tables
@@ -217,7 +220,8 @@
 											</li>
 											<li>
 												<a
-													href=""
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Wardrobes
@@ -225,7 +229,8 @@
 											</li>
 											<li>
 												<a
-													href=""
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Drawers
@@ -233,7 +238,8 @@
 											</li>
 											<li>
 												<a
-													href=""
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Dressing Tables
@@ -243,7 +249,8 @@
 									</li>
 									<li class="flex flex-col gap-4">
 										<a
-											href=""
+											href="shop
+											"
 											class="font-semibold border-b border-neutral-300 hover:text-[#939d73]"
 										>
 											Living Room
@@ -251,7 +258,8 @@
 										<ul class="flex flex-col gap-4">
 											<li>
 												<a
-													href=""
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Sofas
@@ -259,7 +267,8 @@
 											</li>
 											<li>
 												<a
-													href=""
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													TV Benches
@@ -267,7 +276,8 @@
 											</li>
 											<li>
 												<a
-													href=""
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Coffee Tables
@@ -275,7 +285,8 @@
 											</li>
 											<li>
 												<a
-													href=""
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Bookcases
@@ -283,7 +294,8 @@
 											</li>
 											<li>
 												<a
-													href=""
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Cabinets
@@ -291,7 +303,8 @@
 											</li>
 											<li>
 												<a
-													href=""
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Desks
@@ -299,7 +312,8 @@
 											</li>
 											<li>
 												<a
-													href=""
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Shoe Cabinets
@@ -309,7 +323,8 @@
 									</li>
 									<li class="flex flex-col gap-4">
 										<a
-											href=""
+											href="shop
+											"
 											class="font-semibold border-b border-neutral-300 hover:text-[#939d73]"
 										>
 											Kitchen
@@ -317,7 +332,8 @@
 										<ul class="flex flex-col gap-4">
 											<li>
 												<a
-													href=""
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Dining Tables
@@ -332,8 +348,8 @@
 						<!-- product -->
 						<li class="h-full hover:bg-[#B5C18E]">
 							<a
-								href=""
-								class="flex justify-center items-center h-full px-6"
+								href="shop.html"
+								class="flex justify-center items-center h-full px-6 hover:text-white"
 								onmouseenter="showNav('sub-product')"
 								onmouseleave="showNav('sub-product')"
 							>
@@ -341,16 +357,16 @@
 							</a>
 							<nav
 								id="sub-product"
-								class="hidden absolute top-16 left-0 z-50 w-full"
+								class="hidden absolute top-16 left-0 z-49 w-full"
 								onmouseenter="showNav('sub-product')"
 								onmouseleave="showNav('sub-product')"
 							>
 								<ul
-									class="flex justify-center gap-32 bg-white px-14 py-6 m-auto w-fit"
+									class="flex justify-center gap-32 bg-white px-14 py-6 m-auto w-fit border border-t-0"
 								>
 									<li class="flex flex-col gap-4">
 										<a
-											href=""
+											href="shop.html"
 											class="font-semibold border-b border-neutral-300 hover:text-[#939d73]"
 										>
 											Beds
@@ -358,7 +374,7 @@
 										<ul class="flex flex-col gap-4">
 											<li>
 												<a
-													href=""
+													href="shop.html"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Beds
@@ -368,7 +384,7 @@
 									</li>
 									<li class="flex flex-col gap-4">
 										<a
-											href=""
+											href="shop.html"
 											class="font-semibold border-b border-neutral-300 hover:text-[#939d73]"
 										>
 											Tables
@@ -376,7 +392,7 @@
 										<ul class="flex flex-col gap-4">
 											<li>
 												<a
-													href=""
+													href="shop.html"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Bedside Tables
@@ -384,7 +400,7 @@
 											</li>
 											<li>
 												<a
-													href=""
+													href="shop.html"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Dressing Tables
@@ -392,7 +408,7 @@
 											</li>
 											<li>
 												<a
-													href=""
+													href="shop.html"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Coffee Tables
@@ -400,7 +416,7 @@
 											</li>
 											<li>
 												<a
-													href=""
+													href="shop.html"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Desks
@@ -408,7 +424,7 @@
 											</li>
 											<li>
 												<a
-													href=""
+													href="shop.html"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Dining Table
@@ -418,7 +434,7 @@
 									</li>
 									<li class="flex flex-col gap-4">
 										<a
-											href=""
+											href="shop.html"
 											class="font-semibold border-b border-neutral-300 hover:text-[#939d73]"
 										>
 											Chairs
@@ -426,7 +442,7 @@
 										<ul class="flex flex-col gap-4">
 											<li>
 												<a
-													href=""
+													href="shop.html"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Sofa
@@ -434,7 +450,7 @@
 											</li>
 											<li>
 												<a
-													href=""
+													href="shop.html"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Dining Chairs
@@ -442,7 +458,7 @@
 											</li>
 											<li>
 												<a
-													href=""
+													href="shop.html"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Desk Chairs
@@ -452,7 +468,7 @@
 									</li>
 									<li class="flex flex-col gap-4">
 										<a
-											href=""
+											href="shop.html"
 											class="font-semibold border-b border-neutral-300 hover:text-[#939d73]"
 										>
 											Cabinets
@@ -460,7 +476,7 @@
 										<ul class="flex flex-col gap-4">
 											<li>
 												<a
-													href=""
+													href="shop.html"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Wardrobes
@@ -468,7 +484,7 @@
 											</li>
 											<li>
 												<a
-													href=""
+													href="shop.html"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Drawers
@@ -476,7 +492,7 @@
 											</li>
 											<li>
 												<a
-													href=""
+													href="shop.html"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													TV Benches
@@ -484,7 +500,7 @@
 											</li>
 											<li>
 												<a
-													href=""
+													href="shop.html"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Shoe Cabinets
@@ -494,7 +510,7 @@
 									</li>
 									<li class="flex flex-col gap-4">
 										<a
-											href=""
+											href="shop.html"
 											class="font-semibold border-b border-neutral-300 hover:text-[#939d73]"
 										>
 											Shelves
@@ -502,7 +518,7 @@
 										<ul class="flex flex-col gap-4">
 											<li>
 												<a
-													href=""
+													href="shop.html"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Bookcases
@@ -510,7 +526,7 @@
 											</li>
 											<li>
 												<a
-													href=""
+													href="shop.html"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Cabinets
@@ -526,7 +542,7 @@
 						<li class="h-full hover:bg-[#B5C18E]">
 							<a
 								href="about.html"
-								class="flex justify-center items-center h-full px-6"
+								class="flex justify-center items-center h-full px-6 hover:text-white"
 							>
 								About Us
 							</a>
@@ -538,15 +554,65 @@
 				<nav class="hidden md:flex">
 					<ul class="flex items-center gap-6">
 						<li>
-							<a>
-								<i class="fa-solid fa-magnifying-glass"></i>
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</li>
+						<li>
+							<a
+								href="cart.html"
+								onmouseenter="showNav('cart-nav')"
+								onmouseleave="showNav('cart-nav')"
+							>
+								<i class="fa-solid fa-cart-shopping"></i>
 							</a>
 						</li>
 						<li>
-							<a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+							<button onclick="showNav('profile-nav')">
+								<i class="fa-regular fa-user"></i>
+							</button>
 						</li>
-						<li>
-							<a href=""><i class="fa-regular fa-user"></i></a>
+					</ul>
+				</nav>
+
+				<!-- cart nav -->
+				<nav
+					id="cart-nav"
+					class="hidden fixed top-16 right-0 z-49 text-center bg-white"
+				>
+					<div
+						class="w-40 border border-t-0"
+						onmouseenter="showNav('cart-nav')"
+						onmouseleave="showNav('cart-nav')"
+					></div>
+				</nav>
+
+				<!-- profile nav -->
+				<nav
+					id="profile-nav"
+					class="hidden fixed top-16 right-0 z-49 text-center bg-white"
+				>
+					<ul class="w-40 h-full border border-t-0">
+						<li class="w-full hover:bg-[#B5C18E]">
+							<a href="" class="w-full h-full p-3 block hover:text-white"
+								>Profile</a
+							>
+						</li>
+						<hr />
+						<li class="w-full hover:bg-[#B5C18E]">
+							<a href="" class="w-full h-full p-3 block hover:text-white"
+								>Wishlists</a
+							>
+						</li>
+						<hr />
+						<li class="w-full hover:bg-[#B5C18E]">
+							<a href="" class="w-full h-full p-3 block hover:text-white"
+								>Setting</a
+							>
+						</li>
+						<hr />
+						<li class="w-full hover:bg-[#B5C18E]">
+							<a href="" class="w-full h-full p-3 block hover:text-white"
+								>Log Out</a
+							>
 						</li>
 					</ul>
 				</nav>
@@ -556,30 +622,26 @@
 		<!-------------------- main -------------------->
 		<main>
 			<!-- hero section -->
-			<section class="relative h-[300px] overflow-hidden">
-				<picture>
-					<img
-						src="images/Cart-hero-image 1.png"
-						alt="Banner"
-						class="h-[300px]"
-					/>
-				</picture>
-				<article
-					class="absolute bottom-0 p-8 bg-orange-100/50 w-full md:p-0 md:bg-transparent md:top-1/3 md:text-center"
-				>
-					<h1 class="mb-4">All Product</h1>
-					<h3 class="hidden md:block">
-						<a href="index.html" class="hover:text-[#939d73]">Home</a> >
-						<a href="shop.html" class="hover:text-[#939d73]">All Product</a>
-					</h3>
-				</article>
+			<section
+				class="h-[300px] overflow-hidden flex flex-col justify-center items-center"
+				style="background-image: url(images/Cart-hero-image\ 1.png)"
+			>
+				<h1 class="mb-4">All Product</h1>
+				<h3 class="hidden md:block">
+					<a href="index.html" class="hover:text-[#939d73]">Home</a> >
+					<a href="shop.html" class="hover:text-[#939d73]">All Product</a>
+				</h3>
 			</section>
 
 			<!-- filter section -->
 			<section class="flex justify-between h-16 bg-[#B5C18E]">
 				<ul class="flex items-center px-4 gap-4">
 					<li class="p-4">
-						<i class="fa-solid fa-sliders"></i>
+						<button
+							onclick="showNav('sub-filter'), toggleOverflowHidden('body')"
+						>
+							<i class="fa-solid fa-sliders"></i>
+						</button>
 					</li>
 					<li class="hidden md:flex">Filter</li>
 					<li class="lg:hidden pl-4 py-2 border-l border-neutral-700">
@@ -608,6 +670,159 @@
 						/>
 					</li>
 				</ul>
+			</section>
+
+			<section
+				id="sub-filter"
+				class="hidden fixed top-0 left-0 z-50 bg-black/50 w-full h-full"
+			>
+				<div
+					class="relative w-full h-full md:w-96 mt-20 md:mt-0 flex flex-col bg-white rounded-t-xl md:rounded-s-none md:rounded-r-xl"
+				>
+					<div class="py-6 text-center border-b relative">
+						<span> Filter and Sort</span>
+						<button
+							onclick="showNav('sub-filter'), toggleOverflowHidden('body')"
+							class="absolute right-6"
+						>
+							<i class="fa-solid fa-xmark"></i>
+						</button>
+					</div>
+					<ul class="w-full bg-white overflow-y-scroll">
+						<li class="border-b">
+							<button onclick="showNav('sub-sort-by')" class="w-full py-6">
+								Sort by
+							</button>
+						</li>
+						<ul id="sub-sort-by" class="hidden bg-neutral-100">
+							<li class="border-b">
+								<button class="w-full py-6">must be input radio</button>
+							</li>
+							<li class="border-b">
+								<button class="w-full py-6">Price: low to high</button>
+							</li>
+							<li class="border-b">
+								<button class="w-full py-6">Price: high to low</button>
+							</li>
+						</ul>
+
+						<li class="border-b">
+							<button onclick="showNav('sub-category')" class="w-full py-6">
+								Category
+							</button>
+						</li>
+						<ul id="sub-category" class="hidden bg-neutral-100">
+							<li class="border-b">
+								<button class="w-full py-6">this is tag</button>
+							</li>
+							<li class="border-b">
+								<button class="w-full py-6">Living Room</button>
+							</li>
+							<li class="border-b">
+								<button class="w-full py-6">Kitchen</button>
+							</li>
+						</ul>
+
+						<li class="border-b">
+							<button onclick="showNav('sub-color')" class="w-full py-6">
+								Color
+							</button>
+						</li>
+						<ul id="sub-color" class="hidden bg-neutral-100">
+							<li class="border-b">
+								<button class="w-full py-6">Cream</button>
+							</li>
+							<li class="border-b">
+								<button class="w-full py-6">Red</button>
+							</li>
+							<li class="border-b">
+								<button class="w-full py-6">Blue</button>
+							</li>
+						</ul>
+
+						<li class="border-b">
+							<button onclick="showNav('sub-size')" class="block w-full py-6">
+								Size
+							</button>
+						</li>
+						<ul id="sub-size" class="hidden bg-neutral-100">
+							<li class="border-b">
+								<button class="w-full py-6">maybe input form</button>
+							</li>
+							<li class="border-b">
+								<button class="w-full py-6">min width - max width</button>
+							</li>
+							<li class="border-b">
+								<button class="w-full py-6">min height - max height</button>
+							</li>
+						</ul>
+
+						<li class="border-b">
+							<button onclick="showNav('sub-price')" class="block w-full py-6">
+								Price
+							</button>
+						</li>
+						<ul id="sub-price" class="hidden bg-neutral-100">
+							<li class="border-b">
+								<button class="w-full py-6">this is checkbox</button>
+							</li>
+							<li class="border-b">
+								<button class="w-full py-6">THB 0 - 199</button>
+							</li>
+							<li class="border-b">
+								<button class="w-full py-6">THB 200 - 399</button>
+							</li>
+						</ul>
+
+						<li class="border-b">
+							<button onclick="showNav('sub-rating')" class="block w-full py-6">
+								Rating
+							</button>
+						</li>
+						<ul id="sub-rating" class="hidden bg-neutral-100">
+							<li class="border-b">
+								<button class="w-full py-6">checkbox</button>
+							</li>
+							<li class="border-b">
+								<button class="w-full py-6">5</button>
+							</li>
+							<li class="border-b">
+								<button class="w-full py-6">4</button>
+							</li>
+						</ul>
+
+						<li class="border-b">
+							<button onclick="showNav('sub-some')" class="block w-full py-6">
+								Something
+							</button>
+						</li>
+						<ul id="sub-some" class="hidden bg-neutral-100">
+							<li class="border-b">
+								<button class="w-full py-6">checkbox</button>
+							</li>
+							<li class="border-b">
+								<button class="w-full py-6">5</button>
+							</li>
+							<li class="border-b">
+								<button class="w-full py-6">4</button>
+							</li>
+						</ul>
+					</ul>
+					<div class="flex gap-4 p-6 text-center w-full bg-white">
+						<button
+							type="submit"
+							class="bg-[#B5C18E] hover:bg-[#a4af80] p-4 w-1/2 rounded-xl"
+						>
+							Filter
+						</button>
+						<button
+							type="reset"
+							class="bg-neutral-200 hover:bg-neutral-300 p-4 w-1/2 rounded-xl"
+						>
+							Reset
+						</button>
+					</div>
+				</div>
 			</section>
 
 			<!-- product section -->
