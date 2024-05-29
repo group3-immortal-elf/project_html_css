@@ -36,6 +36,9 @@
 					@apply text-2xl;
 					@apply font-semibold;
 				}
+				h4 {
+					@apply font-semibold;
+				}
 				img {
 					@apply w-full;
 					@apply object-cover;
@@ -576,13 +579,137 @@
 				<!-- cart nav -->
 				<nav
 					id="cart-nav"
-					class="hidden fixed top-16 right-0 z-49 text-center bg-white"
+					onmouseenter="showNav('cart-nav')"
+					onmouseleave="showNav('cart-nav')"
+					class="hidden fixed top-0 right-12 z-50 w-12 h-16 text-base"
 				>
-					<div
-						class="w-40 border border-t-0"
-						onmouseenter="showNav('cart-nav')"
-						onmouseleave="showNav('cart-nav')"
-					></div>
+					<div class="fixed top-16 right-0 w-96 border border-t-0 bg-white">
+						<h3 class="p-5">Shopping Cart</h3>
+
+						<hr class="mx-4" />
+
+						<ul class="h-80 overflow-y-scroll">
+							<li class="flex items-center gap-4 p-4">
+								<input
+									type="checkbox"
+									name="checkbox"
+									id="product.id"
+									class="h-5 w-5"
+								/>
+								<picture class="rounded-xl w-1/4">
+									<img
+										src="images/Cart-hero-image 1.png"
+										alt="thumbnail"
+										class="aspect-square"
+									/>
+								</picture>
+								<div
+									id="productInfo"
+									class="flex flex-col w-2/3 justify-center items-start"
+								>
+									<h4>Sofaaaaaa</h4>
+									<p>1 x price</p>
+								</div>
+								<button class="text-[#B5C18E] h-fit text-xl">
+									<i class="fa-solid fa-circle-xmark"></i>
+								</button>
+							</li>
+
+							<li class="flex items-center gap-4 p-4">
+								<input
+									type="checkbox"
+									name="checkbox"
+									id="product.id"
+									class="h-5 w-5"
+								/>
+								<picture class="rounded-xl w-1/4">
+									<img
+										src="images/Cart-hero-image 1.png"
+										alt="thumbnail"
+										class="aspect-square"
+									/>
+								</picture>
+								<div
+									id="productInfo"
+									class="flex flex-col w-2/3 justify-center items-start"
+								>
+									<h4>Sofaaaaaa</h4>
+									<p>1 x price</p>
+								</div>
+								<button class="text-[#B5C18E] h-fit text-xl">
+									<i class="fa-solid fa-circle-xmark"></i>
+								</button>
+							</li>
+
+							<li class="flex items-center gap-4 p-4">
+								<input
+									type="checkbox"
+									name="checkbox"
+									id="product.id"
+									class="h-5 w-5"
+								/>
+								<picture class="rounded-xl w-1/4">
+									<img
+										src="images/Cart-hero-image 1.png"
+										alt="thumbnail"
+										class="aspect-square"
+									/>
+								</picture>
+								<div
+									id="productInfo"
+									class="flex flex-col w-2/3 justify-center items-start"
+								>
+									<h4>Sofaaaaaa</h4>
+									<p>1 x price</p>
+								</div>
+								<button class="text-[#B5C18E] h-fit text-xl">
+									<i class="fa-solid fa-circle-xmark"></i>
+								</button>
+							</li>
+
+							<li class="flex items-center gap-4 p-4">
+								<input
+									type="checkbox"
+									name="checkbox"
+									id="product.id"
+									class="h-5 w-5"
+								/>
+								<picture class="rounded-xl w-1/4">
+									<img
+										src="images/Cart-hero-image 1.png"
+										alt="thumbnail"
+										class="aspect-square"
+									/>
+								</picture>
+								<div
+									id="productInfo"
+									class="flex flex-col w-2/3 justify-center items-start"
+								>
+									<h4>Sofaaaaaa</h4>
+									<p>1 x price</p>
+								</div>
+								<button class="text-[#B5C18E] h-fit text-xl">
+									<i class="fa-solid fa-circle-xmark"></i>
+								</button>
+							</li>
+						</ul>
+
+						<div class="">
+							<div class="flex justify-between p-4">
+								<h4 class="">Subtotal</h4>
+								<p>999,999</p>
+							</div>
+							<hr />
+							<div class="flex p-4 gap-4">
+								<button class="bg-[#B5C18E] text-white p-2 w-1/2 rounded-full">
+									Checkout
+								</button>
+								<button class="bg-[#B5C18E] text-white p-2 w-1/2 rounded-full">
+									Comparison
+								</button>
+							</div>
+						</div>
+					</div>
 				</nav>
 
 				<!-- profile nav -->
@@ -680,7 +807,7 @@
 					class="relative w-full h-full md:w-96 mt-20 md:mt-0 flex flex-col bg-white rounded-t-xl md:rounded-s-none md:rounded-r-xl"
 				>
 					<div class="py-6 text-center border-b relative">
-						<span> Filter and Sort</span>
+						<span>Filter and Sort</span>
 						<button
 							onclick="showNav('sub-filter'), toggleOverflowHidden('body')"
 							class="absolute right-6"
