@@ -551,10 +551,10 @@
 		<!-- This is main section. -->
 		<main>
 			<!-------------------- mobile display -------------------->
-		<div class="display_mobile md:hidden">
-			<!-- Hero section -->
-			<section class="relative">
-<!-- 				<picture>
+			<div class="display_mobile md:hidden m-[1rem] flex flex-col justify-center">
+				<!-- Hero section -->
+				<section class="relative">
+					<!-- 				<picture>
 					<img
 						class="h-[500px]"
 						src="images/Cart-hero-image 1.png"
@@ -577,40 +577,107 @@
 						Buy Now
 					</a>
 				</article> -->
-			</section>
-			<section class="persanal">
-				<div class="head_personl">
-					<h3>Billing details</h3>
-					<div class="information flex ">
-						<input type="checkbox" id="information">
-						<h5 class="text-[#b99470]"> Personal information</h5>
-				</div>
-				<div class="profile flex flex-col">
-					<div class="user_name flex ">
-						<div class="frist_name">
-							<h4>First Name</h4>
-							<input type="text" id="frist_input" class="border border-[#111110] ">
+				</section>
+				<section class="persanal">
+					<article class="head_personl">
+						<h3>Billing details</h3>
+						<div class="information flex">
+							<input type="checkbox" id="information" />
+							<h5 class="text-[#b99470]">Personal information</h5>
 						</div>
-						<div class="last_name flex flex-col">
-							<h4>Lest Name</h4>
-							<input type="text" id="last_input" class="border border-[#111110] ">
+					</article>
+					<details id="details_profile" class="flex flex-col">
+						<summary>Name</summary>
+						<div id="user_name" class="flex">
+							<div class="frist_name">
+								<h4>First Name</h4>
+								<input
+									type="text"
+									id="frist_input"
+									class="border border-[#111110]"
+								/>
+							</div>
+							<div class="last_name">
+								<h4>Lest Name</h4>
+								<input
+									type="text"
+									id="last_input"
+									class="border border-[#111110]"
+								/>
+							</div>
 						</div>
+						<div id="phone">
+							<h4>Phone</h4>
+							<input type="tel" class="phone border border-[#111110]" />
+						</div>
+						<div id="email">
+							<h4>Email Address</h4>
+							<input type="email" class="phone border border-[#111110]" />
+						</div>
+						<div id="company">
+							<h4>Company Name(Optional)</h4>
+							<input
+								type="text"
+								class="phone border border-[#111110] max-[15rem]"
+							/>
+						</div>
+					</details>
+				</section>
+				<section id="user_contact">
+					<article id="head_contact" class="">
+						<h3>Address</h3>
+						<div id="information" class="flex">
+							<input type="checkbox" id="information" />
+							<h5 class="text-[#b99470]"> Same address as your account</h5>
+						</div>
+					</article>
+					<details id="detils_contact" class="flex flex-col">
+						<summary>Address</summary>
+						<div id="country">
+							<h4>Country / Region</h4>
+							<input type="text" class="phone border border-[#111110]" />
+						</div>
+						<div id="street_address">
+							<h4>Street address</h4>
+							<input type="text" class="phone border border-[#111110]" />
+						</div>
+						<div id="city">
+							<h4>Town / City</h4>
+							<input
+								type="text"
+								class="phone border border-[#111110] max-[15rem]"
+							/>
+						</div>
+						<div id="province">
+							<h4>Province</h4>
+							<input
+								type="text"
+								class="phone border border-[#111110] max-[15rem]"
+							/>
+						</div>
+						<div id="zip_code">
+							<h4>ZIP code</h4>
+							<input
+								type="text"
+								class="phone border border-[#111110] max-[15rem]"
+							/>
+						</div>
+					</details>
+				</section>
+				<section id="checkout_product">
+					<input type="image" id="image_product" art="pruduct" src="/project_html_css/images/10395680_m1 (1).jpg" class="w-9/12"/>
+					<div class="flex flex-col justify-between">
+						<div class="flex justify-between">
+							<h3>Product</h3>
+							<h3>Subtotal</h3>
+						</div>
+						<ul id="total_price" >
+							<li class="flex justify-between"><span>Name_Product x1</span><span>999 Baht</span></li>
+							<li class="flex justify-between"><span>Total</span><span>999 Baht</span></li>
+						</ul>
 					</div>
-					<div class="phone">
-						<h4>Phone</h4>
-						<input type="text" class="phone border border-[#111110] ">
-					</div>
-					<div class="email">
-						<h4>Email Address</h4>
-						<input type="text" class="phone border border-[#111110] ">
-					</div>
-					<div class="company">
-						<h4>Company Name(Optional)</h4>
-						<input type="text" class="phone border border-[#111110] max-[15rem]">
-					</div>
-				</div>
-			</section>
-		</div>
+				</section>
+			</div>
 		</main>
 	</body>
 </html>
