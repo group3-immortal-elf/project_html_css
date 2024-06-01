@@ -66,7 +66,7 @@
 			<nav class="flex justify-between items-center px-5 h-16">
 				<!-------------------- logo -------------------->
 				<a class="flex items-center gap-4" href="index.html">
-					<picture class="w-12"
+					<picture class="w-5"
 						><img src="images/elviro logo.svg" alt="Logo"
 					/></picture>
 					<h3>Elviro</h3>
@@ -543,34 +543,113 @@
 
 		<!-- This is main section. -->
 		<main>
-			<section id="banner">
+			<!-- Banner section -->
+			<section id="banner ">
+				<div class="relative">
 				<img
 					class="object-cover h-[500px]"
 					src="./images/Cart-hero-image 1.png"
 				/>
-				<h1></h1>
+				<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+					<h1 class="text-black">About</h1>
+				</div>
+				</div>
 			</section>
 
-			<section id="content">
-				<article class="text-left py-[50px] px-[100px] text-3xl">
-					<div id="logo" class="flex">
-						<img src="./images/elviro logo.svg" class="h-[250px] "
-						<h2>Elviro</h2>
-						<caption class>"We care about your family"</caption>
+			<!-- Content section -->
+			<section id="content" class="ml-[95px] mr-[56px] my-[66px]">
+				<div class="flex justify-center gap-5 mb-8">
+					<div class="min-w-[140px] w-[140px] md:w-[160px] ">
+						<img src="./images/elviro logo.svg" alt="Elviro Logo" />
 					</div>
-
-					<p>
-						Furniture is mor than just furniture. We understand how meaningful
-						it can be to your growing family. <span class="">Elviro</span> is
-						derived from an elf, a magical in a fantasy fairytale and
-						environment. We are here to make your experience of shopping
-						magical.
+					<div id="brandCaption" class="flex-col content-center content">
+						<h2 class="text-[50px] md:text-[80px] mb-3 text-left">Elviro</h2>
+						<p class="text-xl md:text-2xl italic font-normal">
+							"We care about your family"
+						</p>
+					</div>
+				</div>
+				<div id="textContent" class="text-lg">
+					<p class="mb-5"> 
+						Furniture is more than just furniture. We understand how meaningful
+						it can be to your growing family. <b>Elviro</b> is derived from an <i>elf</i>, a
+						magical in a fantasy fairytale and <i>environment</i>. We are here to make
+						your experience of shopping magical.
 					</p>
-				</article>
+					<p class="mb-5">
+						Not only is our furniture environmentally friendly, and safe for
+						everyone. But we aim to make it suited for all the stages of your
+						family. That’s the motto of Ms. Elvira Yuri, CEO and founder of
+						Elviro.
+					</p>
+					<p class="mb-5">
+						At Elviro, you will find all the furniture for all tastes, which
+						will make shopping enjoyable, and using them even more magical.
+					</p>
+				</div>
 			</section>
 		</main>
 
 		<!-- This is footer. -->
-		<footer></footer>
+		<footer>
+			<footer
+			class="flex flex-col gap-4 p-4 md:py-8 md:px-20 border-t border-[#B5C18E]"
+		>
+			<div class="hidden md:flex gap-36">
+				<ul class="flex flex-col gap-8">
+					<li><h3>Elviro.</h3></li>
+					<li class="text-neutral-400">Bangkok, Thailand</li>
+				</ul>
+
+				<ul class="flex flex-col gap-4">
+					<li class="text-neutral-400 mb-4">Links</li>
+					<li class="hover:text-[#939d73] hover:underline decoration-[#939d73]">
+						<a href="index.html">Home</a>
+					</li>
+					<li class="hover:text-[#939d73] hover:underline decoration-[#939d73]">
+						<a href="shop.html">Shop</a>
+					</li>
+					<li class="hover:text-[#939d73] hover:underline decoration-[#939d73]">
+						<a href="about.html">About</a>
+					</li>
+					<li class="hover:text-[#939d73] hover:underline decoration-[#939d73]">
+						<a href="">Contact</a>
+					</li>
+				</ul>
+
+				<ul class="flex flex-col gap-4">
+					<li class="text-neutral-400 mb-4">Help</li>
+					<li class="hover:text-[#939d73] hover:underline decoration-[#939d73]">
+						<a href="index.html">Payment Options</a>
+					</li>
+					<li class="hover:text-[#939d73] hover:underline decoration-[#939d73]">
+						<a href="shop.html">Returns</a>
+					</li>
+					<li class="hover:text-[#939d73] hover:underline decoration-[#939d73]">
+						<a href="about.html">Privacy Policies</a>
+					</li>
+				</ul>
+
+				<ul class="lg:flex flex-col gap-4 hidden">
+					<li class="text-neutral-400 mb-1">Newsletter</li>
+					<li>
+						<form class="flex flex-col xl:flex-row items-start gap-4">
+							<input
+								type="email"
+								placeholder="Enter Your Email Address"
+								class="border-b border-neutral-700 text-base w-60 text-ellipsis"
+							/>
+							<button
+								type="submit"
+								class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
+							>
+								SUBSCRIBE
+							</button>
+						</form>
+					</li>
+				</ul>
+			</div>
+			<p>&copy; 2024 Elviro. All rights reserved.</p>
+		</footer>
 	</body>
 </html>
