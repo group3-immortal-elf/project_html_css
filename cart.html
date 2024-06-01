@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -543,42 +543,197 @@
 
 		<!-- This is main section. -->
 		<main>
-			<section id="hero">
-				<picture><img src="images/Cart-hero-image 1.png" /></picture>
-				<h1>Cart</h1>
-				<p>Home > cart</p>
+			<!-- Hero section -->
+			<section class="relative">
+				<picture>
+					<img
+						class="h-[200px] md:h-[300px]"
+						src="images/Cart-hero-image 1.png"
+						alt="Banner"
+					/>
+				</picture>
+				<article
+					class="absolute top-14 flex left-0 right-0 flex-col items-center justify-center gap-2"
+				>
+					<img
+						class="hidden size-16 bg-white rounded-full"
+						src="images/elviro logo.svg"
+					/>
+					<h1 class="text-3xl font-bold md:text-neutral-700">Cart</h1>
+					<a
+						href="index.html"
+						class="hidden md:flex justify-center bg-orange-100 p-3 w-1/2 text-xl font-semibold hover:bg-orange-200"
+					>
+						Home > Cart
+					</a>
+				</article>
 			</section>
 
 			<section id="cart_description">
-				<div>
-					<picture><img src="images/cart-image.png" /></picture>
+				<h3 class="pt-4 pl-4 md:hidden">Cart (1)</h3>
+				<div class="hidden md:flex flex-row py-12 align-middle">
+					<picture>
+						<img class="max-w-96 px-8" src="images/cart-image.png" />
+					</picture>
+					<div class="flex flex-col gap-2 px-8 justify-center">
+						<h2 class="text-left italic text-4xl pb-4 text-[#B99470]">
+							Here’s your cart list.
+						</h2>
+						<h3 class="text-[#2C2C2C]">
+							Check your items well before checkout.
+						</h3>
+						<p class="text-[#6B6B6B]">
+							All items will include
+							<span class="text-[#2C2C2C] font-bold">tax of 7%</span> Shipping
+							fee will be included. Free shipping of
+							<span class="font-bold">1000 Baht</span> purchase after tax.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="px-8" id="cart_item">
+				<div class="md:flex pt-4">
+					<div class="basis-2/3 px-8 hidden lg:block">
+						<table class="table-auto w-full text-center">
+							<thead class="bg-[#DEAC80]">
+								<tr>
+									<th class=""></th>
+									<th>Product</th>
+									<th>Price</th>
+									<th>Quanlity</th>
+									<th>Subtatal</th>
+									<th class=""></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<img class="py-1" src="images/productcart-mockup.png" />
+									</td>
+									<td>PÄRUP sofa</td>
+									<td>999 Baht</td>
+									<td class="bg-slate-200">1</td>
+									<td>999 Baht</td>
+									<td><i class="fa-solid fa-trash"></i></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 					<div>
-						<div>
-							<h2>Here’s your cart list.</h2>
-							<h3>Check your items well before checkout.</h3>
-							<p>
-								All items will include tax of 7% Shipping fee will be included.
-								Free shipping of 1000 Baht purchase after tax.
-							</p>
+						<div class="flex md:hidden">
+							<img class="w-1/2" src="images/productcart-mockup.png" />
+							<div class="px-2 py-8 bg-[#F4F4F4]">
+								<h3>PÄRUP sofa</h3>
+								<p>Description</p>
+								<h3>THB 999</h3>
+								<div class="flex justify-between items-center">
+									<p>
+										-
+										<span class="px-2 py-1 border-2 border-black">1</span>
+										+
+									</p>
+									<i class="fa-solid fa-trash text-xl"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="basis-1/3">
+						<div class="md:bg-[#F9F1E7] px-4 py-6 rounded-lg">
+							<h3 class="text-center hidden">Cart Totals</h3>
+							<div class="flex justify-between px-2">
+								<p class="text-base text-left font-semibold">Cart Totals</p>
+								<p class="text-base">999 Baht</p>
+							</div>
+							<div class="flex justify-between px-2">
+								<p class="text-base text-left font-semibold">7% Tax</p>
+								<p class="text-base">70 Baht</p>
+							</div>
+							<div class="flex justify-between px-2">
+								<p class="text-base font-semibold">Delivery</p>
+								<p class="text-base">0 Baht</p>
+							</div>
+							<br />
+							<hr class="pt-4" />
+							<div class="flex justify-between px-2">
+								<p class="text-base font-semibold">Total</p>
+								<p class="text-base">1069 Baht</p>
+							</div>
+							<div class="flex justify-center pt-6">
+								<button
+									class="bg-orange-600 md:bg-[#B99470] text-white rounded-md text-base px-4 py-2"
+								>
+									Check Out
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-
-			<section id="cart_item">
-				<div>
-					<div>
-						<div>table of item</div>
-						<div>cart tatal</div>
-					</div>
-				</div>
-			</section>
-			<div>
+			<div class="text-center py-10">
 				<h3>Missing any items? continue <span>shopping</span></h3>
 			</div>
 		</main>
 
 		<!-- This is footer. -->
-		<footer></footer>
+		<footer
+			class="flex flex-col gap-4 p-4 md:py-8 md:px-20 border-t border-[#B5C18E]"
+		>
+			<div class="hidden md:flex gap-36">
+				<ul class="flex flex-col gap-8">
+					<li><h3>Elviro.</h3></li>
+					<li class="text-neutral-400">Bangkok, Thailand</li>
+				</ul>
+
+				<ul class="flex flex-col gap-4">
+					<li class="text-neutral-400 mb-4">Links</li>
+					<li class="hover:text-[#939d73] hover:underline decoration-[#939d73]">
+						<a href="index.html">Home</a>
+					</li>
+					<li class="hover:text-[#939d73] hover:underline decoration-[#939d73]">
+						<a href="shop.html">Shop</a>
+					</li>
+					<li class="hover:text-[#939d73] hover:underline decoration-[#939d73]">
+						<a href="about.html">About</a>
+					</li>
+					<li class="hover:text-[#939d73] hover:underline decoration-[#939d73]">
+						<a href="">Contact</a>
+					</li>
+				</ul>
+
+				<ul class="flex flex-col gap-4">
+					<li class="text-neutral-400 mb-4">Help</li>
+					<li class="hover:text-[#939d73] hover:underline decoration-[#939d73]">
+						<a href="index.html">Payment Options</a>
+					</li>
+					<li class="hover:text-[#939d73] hover:underline decoration-[#939d73]">
+						<a href="shop.html">Returns</a>
+					</li>
+					<li class="hover:text-[#939d73] hover:underline decoration-[#939d73]">
+						<a href="about.html">Privacy Policies</a>
+					</li>
+				</ul>
+
+				<ul class="lg:flex flex-col gap-4 hidden">
+					<li class="text-neutral-400 mb-1">Newsletter</li>
+					<li>
+						<form class="flex flex-col xl:flex-row items-start gap-4">
+							<input
+								type="email"
+								placeholder="Enter Your Email Address"
+								class="border-b border-neutral-700 text-base w-60 text-ellipsis"
+							/>
+							<button
+								type="submit"
+								class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
+							>
+								SUBSCRIBE
+							</button>
+						</form>
+					</li>
+				</ul>
+			</div>
+			<p>&copy; 2024 Elviro. All rights reserved.</p>
+		</footer>
 	</body>
 </html>
