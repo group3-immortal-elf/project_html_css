@@ -577,16 +577,15 @@
 				</section>
 				<section id="user_profile" class="lg:w-1/2">
 					<article id="persanal">
-						<div id="head_personl" class="flex flex-col items-start">
-							<h2>Billing details</h2>
-							<br />
+						<div id="head_personl" class="flex flex-col items-start mb-[1.5rem]">
+							<h2 class="my-[1rem]">Billing details</h2>
 							<h3 class="text-[#b99470]">Personal information</h3>
 							<div class="information flex">
 								<input type="checkbox" id="information" class="text-gray-950" />
 								<p class="">Same info. as your account</p>
 							</div>
 						</div>
-						<details id="details_profile" class="flex flex-col">
+						<details id="details_profile" class="flex flex-col gap-y-[1rem]">
 							<summary>Name</summary>
 							<div id="user_name" class="flex">
 								<div class="frist_name">
@@ -594,7 +593,7 @@
 									<input
 										type="text"
 										id="frist_input"
-										class="border border-[#111110]"
+										class="border border-[#111110] rounded-[12px] mr-2"
 									/>
 								</div>
 								<div class="last_name">
@@ -602,65 +601,65 @@
 									<input
 										type="text"
 										id="last_input"
-										class="border border-[#111110]"
+										class="border border-[#111110] rounded-[12px] mr-2"
 									/>
 								</div>
 							</div>
 							<div id="phone">
 								<h4>Phone</h4>
-								<input type="tel" class="phone border border-[#111110]" />
+								<input type="tel" class="phone border border-[#111110] rounded-[12px]" />
 							</div>
 							<div id="email">
 								<h4>Email Address</h4>
-								<input type="email" class="phone border border-[#111110]" />
+								<input type="email" class="phone border border-[#111110] rounded-[12px]" />
 							</div>
 							<div id="company">
 								<h4>Company Name(Optional)</h4>
 								<input
 									type="text"
-									class="phone border border-[#111110] max-[15rem]"
+									class="phone border border-[#111110] max-[15rem] rounded-[12px]"
 								/>
 							</div>
 						</details>
 						<br />
 					</article>
 					<article id="user_contact">
-						<div id="head_contact" class="flex flex-col items-start">
+						<div id="head_contact" class="flex flex-col items-start mb-[1.5rem]">
 							<h3 class="text-[#b99470]">Address</h3>
 							<div id="information" class="flex">
 								<input type="checkbox" id="information" />
 								<p class="">Same address as your account</p>
 							</div>
 						</div>
-						<details id="detils_contact" class="flex flex-col">
+						<details id="detils_contact" class="flex flex-col gap-y-[2rem]">
 							<summary>Address</summary>
 							<div id="country">
 								<h4>Country / Region</h4>
-								<input type="text" class="phone border border-[#111110]" />
+								<input type="text" class="phone border border-[#111110] rounded-[12px]" />
 							</div>
 							<div id="street_address">
 								<h4>Street address</h4>
-								<input type="text" class="phone border border-[#111110]" />
+								<input type="text" class="phone border border-[#111110] rounded-[12px]" />
 							</div>
 							<div id="city">
 								<h4>Town / City</h4>
 								<input
 									type="text"
-									class="phone border border-[#111110] max-[15rem]"
+									class="phone border border-[#111110] max-[15rem] rounded-[12px]"
 								/>
 							</div>
 							<div id="province">
 								<h4>Province</h4>
 								<input
 									type="text"
-									class="phone border border-[#111110] max-[15rem]"
+									class="phone border border-[#111110] max-[15rem] rounded-[12px]"
 								/>
 							</div>
 							<div id="zip_code">
 								<h4>ZIP code</h4>
 								<input
 									type="text"
-									class="phone border border-[#111110] max-[15rem]"
+									class="phone border border-[#111110] max-[15rem] rounded-[12px]"
 								/>
 							</div>
 						</details>
@@ -713,42 +712,68 @@
 						<br>
 						<article>
 							<aside>
-								<input type="checkbox" id="qr_code" class=""/>
+								<input type="radio" id="qr_code" class=""/>
 								<span>Direct Bank Transfer/QR Code</span>
-								<details id="qrCode"class="flex flex-col gap-2 w-60 ">
-									<summary></summary>
-									<button id="kBank" class="flex items-center bg-[#138f2d] text-[#ffff] p-1.5">
+								<div id="qrCode"class="flex flex-col w-60">
+									<!-- <summary></summary> -->
+									<button id="kBank" class="flex items-center bg-[#138f2d] text-[#ffff] p-1.5 my-1">
 										<img src="/project_html_css/Logo_Banks/kbank.svg " class="w-10"/>
 										<p class="ml-2">Kasikorn</p>
 									</button>
-									<button id="ktb" class="flex items-center bg-[#009cd9] text-[#ffff] p-1.5">
+									<button id="ktb" class="flex items-center bg-[#009cd9] text-[#ffff] p-1.5 my-1">
 										<img src="/project_html_css/Logo_Banks/ktb.svg " class="w-10 ]"/>
 										<p class="ml-2">Krungthai</p>
 									</button>
-									<button id="bbl" class="flex items-center bg-[#1f4397] text-[#ffff] p-1.5">
+									<button id="bbl" class="flex items-center bg-[#1f4397] text-[#ffff] p-1.5 my-1">
 										<img src="/project_html_css/Logo_Banks/bbl.svg " class="w-10 ]"/>
 										<p class="ml-2">Siam Commericial</p>
 									</button>
-									<button id="scb" class="flex items-center bg-[#4e2a82] text-[#ffff] p-1.5">
+									<button id="scb" class="flex items-center bg-[#4e2a82] text-[#ffff] p-1.5 my-1">
 										<img src="/project_html_css/Logo_Banks/scb.svg " class="w-10 ]"/>
 										<p class="ml-2">TMB Thanacgart</p>
 									</button>
-									<button id="ttb" class="flex items-center bg-[#0050f0] text-[#ffff] p-1.5">
+									<button id="ttb" class="flex items-center bg-[#0050f0] text-[#ffff] p-1.5 my-1">
 										<img src="/project_html_css/Logo_Banks/ttb.svg " class="w-10 ]"/>
 										<p class="ml-2">Krungthai</p>
 									</button>
-									<button id="qrCode" class="flex items-center bg-[#dadada] text-[#ffff] p-1.5">
+									<button id="qrCode" class="flex items-center bg-[#dadada] text-[#ffff] p-1.5 my-1">
 										<img src="" class="w-10 ]"/>
 										<p class="ml-2">QR Code</p>
 									</button>
-								</details>
+								</div>
 							</aside>
 							<aside>
-								<input type="checkbox" id="pay_card" class=""/>
+								<input type="radio" id="pay_card" class=""/>
 								<span>Pay with card</span>
+								<div>
+								<summary></summary>
+								<div id="card" class=" my-1">
+									<h4>Please select a card</h4>
+									<input type="text" class="border border-[#111110] rounded-[12px] " placeholder=" Visa"/>
+								</div>
+								<div id="cardNumber" class=" my-1">
+									<h4>Card Number</h4>
+									<input type="text" class="border border-[#111110] rounded-[12px]"/>
+								</div>
+								<div id="expiration" class=" my-1">
+									<h4>Expiration Date</h4>
+									<div class="flex">
+									<input type="month" class="border border-[#111110] rounded-[12px]"/>
+									</div>
+								</div>
+								<div id="SecurityCode" class=" my-1">
+									<h4>Security Code</h4>
+									<input type="text" class="border border-[#111110] rounded-[12px]"/>
+								</div>
+								<figure class="flex gap-3">
+									<img src="/project_html_css/Logo_Banks/pngegg.png" class="h-20 w-20"/>
+									<img src="/project_html_css/Logo_Banks/pngegg (1).png" class="h-20 w-20"/>
+									<img src="/project_html_css/Logo_Banks/pngegg (2).png" class="h-20 w-20"/>
+								</figure>
+								</div>
 							</aside>
 							<aside>
-								<input type="checkbox" id="delivery" class=""/>
+								<input type="radio" id="delivery" class=""/>
 								<span>Cash On Delivery</span>
 							</aside>
 						</article>
