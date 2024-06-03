@@ -70,7 +70,11 @@
 				class="flex justify-between items-center px-5 h-16 border-b bg-white"
 			>
 				<!-------------------- logo -------------------->
-				<a class="flex items-center gap-4" href="index.html">
+				<a
+					href="index.html"
+					id="logo-nav"
+					class="flex items-center gap-4 xl:mr-40"
+				>
 					<picture class="w-12">
 						<img src="images/elviro logo.svg" alt="Logo" />
 					</picture>
@@ -79,25 +83,85 @@
 
 				<!-------------------- mobile nav -------------------->
 				<!-- main -->
-				<nav class="md:hidden">
-					<ul class="flex items-center gap-5">
-						<li>
-							<a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+				<nav class="lg:hidden w-full flex justify-end">
+					<ul class="flex justify-end items-center gap-5 w-full">
+						<li
+							id="search-mobile"
+							class="hidden flex lg:flex items-center border border-neutral-500 rounded-full w-full lg:w-40"
+						>
+							<input
+								type="text"
+								class="rounded-full outline-none py-1 px-4 text-ellipsis overflow-hidden text-base flex-grow"
+							/>
+							<button type="submit">
+								<i class="fa-solid fa-magnifying-glass mr-4"></i>
+							</button>
 						</li>
+
+						<!-- profile -->
+						<li id="profile-mobile" class="h-full">
+							<button
+								onclick="showNav('sub-profile-mobile')"
+								class="h-full flex items-center"
+							>
+								<i class="fa-regular fa-user"></i>
+							</button>
+						</li>
+						<li id="cart-mobile" class="h-full">
+							<a href="cart.html" class="h-full flex items-center">
+								<i class="fa-solid fa-cart-shopping"></i>
+							</a>
+						</li>
+
+						<!-- shop -->
 						<li id="mobile-toggle-open" class="">
-							<button onclick="showNav('sub-mobile-nav'), toggleMobileNav()">
+							<button
+								onclick="showNav('sub-mobile-nav'), toggleMobileNav(), showNav('search-mobile'), showNav('profile-mobile'), showNav('cart-mobile'), showNav('logo-nav')"
+							>
 								<i class="fa-solid fa-bars"></i>
 							</button>
 						</li>
 						<li id="mobile-toggle-close" class="text-2xl w-[17.5px] hidden">
-							<button onclick="showNav('sub-mobile-nav'), toggleMobileNav()">
+							<button
+								onclick="showNav('sub-mobile-nav'), toggleMobileNav(), showNav('search-mobile'), showNav('profile-mobile'), showNav('cart-mobile'), showNav('logo-nav')"
+							>
 								<i class="fa-solid fa-xmark"></i>
 							</button>
 						</li>
 					</ul>
 				</nav>
 
-				<!-- sub -->
+				<!-- sub profile -->
+				<nav
+					id="sub-profile-mobile"
+					class="hidden fixed top-16 left-0 z-50 overflow-y-scroll w-full h-[calc(100vh-64px)] md:h-fit"
+				>
+					<ul class="w-full bg-white text-center">
+						<li class="border-b">
+							<a href="" class="block w-full p-3">Log In</a>
+						</li>
+						<li class="border-b">
+							<a href="" class="block w-full p-3">Profile</a>
+						</li>
+						<li class="border-b">
+							<a href="" class="block w-full p-3">Account Setting</a>
+						</li>
+						<li class="border-b">
+							<a href="" class="block w-full p-3">Payment</a>
+						</li>
+						<li class="border-b">
+							<a href="" class="block w-full p-3">Purchase History</a>
+						</li>
+						<li class="border-b">
+							<a href="" class="block w-full p-3">Wishlists</a>
+						</li>
+						<li class="border-b">
+							<a href="" class="block w-full p-3">Log Out</a>
+						</li>
+					</ul>
+				</nav>
+
+				<!-- sub menu -->
 				<nav
 					id="sub-mobile-nav"
 					class="absolute top-16 left-0 z-50 w-full hidden overflow-y-scroll h-[calc(100vh-64px)]"
@@ -151,19 +215,13 @@
 						</ul>
 
 						<li class="border-b">
-							<a href="cart.html" class="block w-full p-3">Cart</a>
-						</li>
-						<li class="border-b">
-							<a href="" class="block w-full p-3">Log In</a>
-						</li>
-						<li class="border-b">
 							<a href="about.html" class="block w-full p-3">About Us</a>
 						</li>
 					</ul>
 				</nav>
 
 				<!-------------------- desktop nav -------------------->
-				<nav class="hidden md:flex h-full w-full">
+				<nav class="hidden lg:flex h-full w-full">
 					<ul class="flex justify-center h-full w-full">
 						<!-- for kid -->
 						<li class="h-full hover:bg-[#B5C18E]">
@@ -554,24 +612,38 @@
 				</nav>
 
 				<!-- desktop icon nav -->
-				<nav class="hidden md:flex">
+				<nav class="hidden lg:flex h-full">
 					<ul class="flex items-center gap-6">
-						<li>
-							<i class="fa-solid fa-magnifying-glass"></i>
+						<li
+							class="flex items-center border border-neutral-500 rounded-full"
+						>
+							<input
+								type="text"
+								class="rounded-full outline-none py-1 px-4 text-ellipsis overflow-hidden w-40 text-base"
+							/>
+							<button type="submit">
+								<i class="fa-solid fa-magnifying-glass mr-4"></i>
+							</button>
 						</li>
-						<li>
+						<li class="h-full">
 							<a
 								href="cart.html"
 								onmouseenter="showNav('cart-nav')"
 								onmouseleave="showNav('cart-nav')"
+								class="h-full flex items-center"
 							>
 								<i class="fa-solid fa-cart-shopping"></i>
 							</a>
 						</li>
-						<li>
-							<button onclick="showNav('profile-nav')">
+						<li class="h-full">
+							<a
+								href="cart.html"
+								onmouseenter="showNav('profile-nav')"
+								onmouseleave="showNav('profile-nav')"
+								class="h-full flex items-center"
+							>
 								<i class="fa-regular fa-user"></i>
-							</button>
+							</a>
 						</li>
 					</ul>
 				</nav>
@@ -581,7 +653,7 @@
 					id="cart-nav"
 					onmouseenter="showNav('cart-nav')"
 					onmouseleave="showNav('cart-nav')"
-					class="hidden fixed top-0 right-12 z-50 w-12 h-16 text-base"
+					class="hidden fixed top-16 right-0 z-49 text-center bg-white"
 				>
 					<div class="fixed top-16 right-0 w-96 border border-t-0 bg-white">
 						<h3 class="p-5">Shopping Cart</h3>
@@ -701,9 +773,12 @@
 							</div>
 							<hr />
 							<div class="flex p-4 gap-4">
-								<button class="bg-[#B5C18E] text-white p-2 w-1/2 rounded-full">
+								<a
+									href="checkout.html"
+									class="bg-[#B5C18E] text-white p-2 w-1/2 rounded-full text-center"
+								>
 									Checkout
-								</button>
+								</a>
 								<button class="bg-[#B5C18E] text-white p-2 w-1/2 rounded-full">
 									Comparison
 								</button>
@@ -715,6 +790,8 @@
 				<!-- profile nav -->
 				<nav
 					id="profile-nav"
+					onmouseenter="showNav('profile-nav')"
+					onmouseleave="showNav('profile-nav')"
 					class="hidden fixed top-16 right-0 z-49 text-center bg-white"
 				>
 					<ul class="w-40 h-full border border-t-0">
