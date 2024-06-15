@@ -36,6 +36,9 @@
 					@apply text-2xl;
 					@apply font-semibold;
 				}
+				h4 {
+					@apply font-semibold;
+				}
 				img {
 					@apply w-full;
 					@apply object-cover;
@@ -60,15 +63,17 @@
 		/>
 	</head>
 
-	<body class="font-[Montserrat] text-neutral-700 text-lg bg-white">
-		<!-- This is header. -->
-		<header class="text-xl">
-			<nav class="flex justify-between items-center px-5 h-16">
+	<body id="body" class="font-[Montserrat] text-neutral-700 text-lg bg-white">
+		<!-------------------- header -------------------->
+		<header class="text-xl sticky top-0 z-50">
+			<nav
+				class="flex justify-between items-center px-5 h-16 border-b bg-white"
+			>
 				<!-------------------- logo -------------------->
 				<a class="flex items-center gap-4" href="index.html">
-					<picture class="w-12"
-						><img src="images/elviro logo.svg" alt="Logo"
-					/></picture>
+					<picture class="w-12">
+						<img src="images/elviro logo.svg" alt="Logo" />
+					</picture>
 					<h3>Elviro</h3>
 				</a>
 
@@ -77,7 +82,7 @@
 				<nav class="md:hidden">
 					<ul class="flex items-center gap-5">
 						<li>
-							<button><i class="fa-solid fa-magnifying-glass"></i></button>
+							<a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
 						</li>
 						<li id="mobile-toggle-open" class="">
 							<button onclick="showNav('sub-mobile-nav'), toggleMobileNav()">
@@ -95,18 +100,19 @@
 				<!-- sub -->
 				<nav
 					id="sub-mobile-nav"
-					class="absolute top-16 left-0 z-50 w-full hidden"
+					class="absolute top-16 left-0 z-50 w-full hidden overflow-y-scroll h-[calc(100vh-64px)]"
 				>
 					<ul class="w-full bg-white text-center">
 						<li class="border-b">
+							<a href="shop.html" class="block w-full p-3">For Kids</a>
+						</li>
+
+						<li class="border-b">
 							<button onclick="showNav('room-nav')" class="w-full p-3">
-								Rooms
+								Room
 							</button>
 						</li>
 						<ul id="room-nav" class="hidden bg-neutral-100">
-							<li class="border-b">
-								<a href="shop.html" class="block w-full p-3">All Rooms</a>
-							</li>
 							<li class="border-b">
 								<a href="shop.html" class="block w-full p-3">BedRoom</a>
 							</li>
@@ -120,12 +126,12 @@
 
 						<li class="border-b">
 							<button onclick="showNav('product-nav')" class="w-full p-3">
-								Products
+								Product
 							</button>
 						</li>
 						<ul id="product-nav" class="hidden bg-neutral-100">
 							<li class="border-b">
-								<a href="shop.html" class="block w-full p-3">All Products</a>
+								<a href="shop.html" class="block w-full p-3">All Product</a>
 							</li>
 							<li class="border-b">
 								<a href="shop.html" class="block w-full p-3">Beds</a>
@@ -159,11 +165,21 @@
 				<!-------------------- desktop nav -------------------->
 				<nav class="hidden md:flex h-full w-full">
 					<ul class="flex justify-center h-full w-full">
+						<!-- for kid -->
+						<li class="h-full hover:bg-[#B5C18E]">
+							<a
+								href="shop.html"
+								class="flex justify-center items-center h-full px-6 hover:text-white"
+							>
+								For Kids
+							</a>
+						</li>
+
 						<!-- room -->
 						<li class="h-full hover:bg-[#B5C18E]">
 							<a
 								href="shop.html"
-								class="flex justify-center items-center h-full px-6"
+								class="flex justify-center items-center h-full px-6 hover:text-white"
 								onmouseenter="showNav('sub-room')"
 								onmouseleave="showNav('sub-room')"
 							>
@@ -171,16 +187,17 @@
 							</a>
 							<nav
 								id="sub-room"
-								class="hidden absolute top-16 left-0 z-50 w-full"
+								class="hidden absolute top-16 left-0 z-49 w-full"
 							>
 								<ul
-									class="flex justify-center gap-32 bg-white px-14 py-6 m-auto w-fit border"
+									class="flex justify-center gap-32 bg-white px-14 py-6 m-auto w-fit border border-t-0"
 									onmouseenter="showNav('sub-room')"
 									onmouseleave="showNav('sub-room')"
 								>
 									<li class="flex flex-col gap-4">
 										<a
-											href="shop.html"
+											href="shop
+											"
 											class="font-semibold border-b border-neutral-300 hover:text-[#939d73]"
 										>
 											Bedroom
@@ -188,7 +205,8 @@
 										<ul class="flex flex-col gap-4">
 											<li>
 												<a
-													href="shop.html"
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Beds
@@ -196,7 +214,8 @@
 											</li>
 											<li>
 												<a
-													href="shop.html"
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Bedside Tables
@@ -204,7 +223,8 @@
 											</li>
 											<li>
 												<a
-													href="shop.html"
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Wardrobes
@@ -212,7 +232,8 @@
 											</li>
 											<li>
 												<a
-													href="shop.html"
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Drawers
@@ -220,7 +241,8 @@
 											</li>
 											<li>
 												<a
-													href="shop.html"
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Dressing Tables
@@ -230,7 +252,8 @@
 									</li>
 									<li class="flex flex-col gap-4">
 										<a
-											href="shop.html"
+											href="shop
+											"
 											class="font-semibold border-b border-neutral-300 hover:text-[#939d73]"
 										>
 											Living Room
@@ -238,7 +261,8 @@
 										<ul class="flex flex-col gap-4">
 											<li>
 												<a
-													href="shop.html"
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Sofas
@@ -246,7 +270,8 @@
 											</li>
 											<li>
 												<a
-													href="shop.html"
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													TV Benches
@@ -254,7 +279,8 @@
 											</li>
 											<li>
 												<a
-													href="shop.html"
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Coffee Tables
@@ -262,7 +288,8 @@
 											</li>
 											<li>
 												<a
-													href="shop.html"
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Bookcases
@@ -270,7 +297,8 @@
 											</li>
 											<li>
 												<a
-													href="shop.html"
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Cabinets
@@ -278,7 +306,8 @@
 											</li>
 											<li>
 												<a
-													href="shop.html"
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Desks
@@ -286,7 +315,8 @@
 											</li>
 											<li>
 												<a
-													href="shop.html"
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Shoe Cabinets
@@ -296,7 +326,8 @@
 									</li>
 									<li class="flex flex-col gap-4">
 										<a
-											href="shop.html"
+											href="shop
+											"
 											class="font-semibold border-b border-neutral-300 hover:text-[#939d73]"
 										>
 											Kitchen
@@ -304,7 +335,8 @@
 										<ul class="flex flex-col gap-4">
 											<li>
 												<a
-													href="shop.html"
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Dining Tables
@@ -320,7 +352,7 @@
 						<li class="h-full hover:bg-[#B5C18E]">
 							<a
 								href="shop.html"
-								class="flex justify-center items-center h-full px-6"
+								class="flex justify-center items-center h-full px-6 hover:text-white"
 								onmouseenter="showNav('sub-product')"
 								onmouseleave="showNav('sub-product')"
 							>
@@ -328,12 +360,12 @@
 							</a>
 							<nav
 								id="sub-product"
-								class="hidden absolute top-16 left-0 z-50 w-full"
+								class="hidden absolute top-16 left-0 z-49 w-full"
 								onmouseenter="showNav('sub-product')"
 								onmouseleave="showNav('sub-product')"
 							>
 								<ul
-									class="flex justify-center gap-32 bg-white px-14 py-6 m-auto w-fit border"
+									class="flex justify-center gap-32 bg-white px-14 py-6 m-auto w-fit border border-t-0"
 								>
 									<li class="flex flex-col gap-4">
 										<a
@@ -398,7 +430,7 @@
 													href="shop.html"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
-													Dining Table
+													Dining Tables
 												</a>
 											</li>
 										</ul>
@@ -416,7 +448,7 @@
 													href="shop.html"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
-													Sofa
+													Sofas
 												</a>
 											</li>
 											<li>
@@ -513,7 +545,7 @@
 						<li class="h-full hover:bg-[#B5C18E]">
 							<a
 								href="about.html"
-								class="flex justify-center items-center h-full px-6"
+								class="flex justify-center items-center h-full px-6 hover:text-white"
 							>
 								About Us
 							</a>
@@ -523,22 +555,513 @@
 
 				<!-- desktop icon nav -->
 				<nav class="hidden md:flex">
-					<ul class="flex gap-6">
+					<ul class="flex items-center gap-6">
 						<li>
-							<button><i class="fa-solid fa-magnifying-glass"></i></button>
+							<i class="fa-solid fa-magnifying-glass"></i>
 						</li>
 						<li>
-							<a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+							<a
+								href="cart.html"
+								onmouseenter="showNav('cart-nav')"
+								onmouseleave="showNav('cart-nav')"
+							>
+								<i class="fa-solid fa-cart-shopping"></i>
+							</a>
 						</li>
 						<li>
-							<a href=""><i class="fa-regular fa-heart"></i></a>
+							<button onclick="showNav('profile-nav')">
+								<i class="fa-regular fa-user"></i>
+							</button>
 						</li>
-						<li>
-							<a href=""><i class="fa-regular fa-user"></i></a>
+					</ul>
+				</nav>
+
+				<!-- cart nav -->
+				<nav
+					id="cart-nav"
+					onmouseenter="showNav('cart-nav')"
+					onmouseleave="showNav('cart-nav')"
+					class="hidden fixed top-0 right-12 z-50 w-12 h-16 text-base"
+				>
+					<div class="fixed top-16 right-0 w-96 border border-t-0 bg-white">
+						<h3 class="p-5">Shopping Cart</h3>
+
+						<hr class="mx-4" />
+
+						<ul class="h-80 overflow-y-scroll">
+							<li class="flex items-center gap-4 p-4">
+								<input
+									type="checkbox"
+									name="checkbox"
+									id="product.id"
+									class="h-5 w-5"
+								/>
+								<picture class="rounded-xl w-1/4">
+									<img
+										src="images/Cart-hero-image 1.png"
+										alt="thumbnail"
+										class="aspect-square"
+									/>
+								</picture>
+								<div
+									id="productInfo"
+									class="flex flex-col w-2/3 justify-center items-start"
+								>
+									<h4>Sofaaaaaa</h4>
+									<p>1 x price</p>
+								</div>
+								<button class="text-[#B5C18E] h-fit text-xl">
+									<i class="fa-solid fa-circle-xmark"></i>
+								</button>
+							</li>
+
+							<li class="flex items-center gap-4 p-4">
+								<input
+									type="checkbox"
+									name="checkbox"
+									id="product.id"
+									class="h-5 w-5"
+								/>
+								<picture class="rounded-xl w-1/4">
+									<img
+										src="images/Cart-hero-image 1.png"
+										alt="thumbnail"
+										class="aspect-square"
+									/>
+								</picture>
+								<div
+									id="productInfo"
+									class="flex flex-col w-2/3 justify-center items-start"
+								>
+									<h4>Sofaaaaaa</h4>
+									<p>1 x price</p>
+								</div>
+								<button class="text-[#B5C18E] h-fit text-xl">
+									<i class="fa-solid fa-circle-xmark"></i>
+								</button>
+							</li>
+
+							<li class="flex items-center gap-4 p-4">
+								<input
+									type="checkbox"
+									name="checkbox"
+									id="product.id"
+									class="h-5 w-5"
+								/>
+								<picture class="rounded-xl w-1/4">
+									<img
+										src="images/Cart-hero-image 1.png"
+										alt="thumbnail"
+										class="aspect-square"
+									/>
+								</picture>
+								<div
+									id="productInfo"
+									class="flex flex-col w-2/3 justify-center items-start"
+								>
+									<h4>Sofaaaaaa</h4>
+									<p>1 x price</p>
+								</div>
+								<button class="text-[#B5C18E] h-fit text-xl">
+									<i class="fa-solid fa-circle-xmark"></i>
+								</button>
+							</li>
+
+							<li class="flex items-center gap-4 p-4">
+								<input
+									type="checkbox"
+									name="checkbox"
+									id="product.id"
+									class="h-5 w-5"
+								/>
+								<picture class="rounded-xl w-1/4">
+									<img
+										src="images/Cart-hero-image 1.png"
+										alt="thumbnail"
+										class="aspect-square"
+									/>
+								</picture>
+								<div
+									id="productInfo"
+									class="flex flex-col w-2/3 justify-center items-start"
+								>
+									<h4>Sofaaaaaa</h4>
+									<p>1 x price</p>
+								</div>
+								<button class="text-[#B5C18E] h-fit text-xl">
+									<i class="fa-solid fa-circle-xmark"></i>
+								</button>
+							</li>
+						</ul>
+
+						<div class="">
+							<div class="flex justify-between p-4">
+								<h4 class="">Subtotal</h4>
+								<p>999,999</p>
+							</div>
+							<hr />
+							<div class="flex p-4 gap-4">
+								<button class="bg-[#B5C18E] text-white p-2 w-1/2 rounded-full">
+									Checkout
+								</button>
+								<button class="bg-[#B5C18E] text-white p-2 w-1/2 rounded-full">
+									Comparison
+								</button>
+							</div>
+						</div>
+					</div>
+				</nav>
+
+				<!-- profile nav -->
+				<nav
+					id="profile-nav"
+					class="hidden fixed top-16 right-0 z-49 text-center bg-white"
+				>
+					<ul class="w-40 h-full border border-t-0">
+						<li class="w-full hover:bg-[#B5C18E]">
+							<a href="" class="w-full h-full p-3 block hover:text-white"
+								>Profile</a
+							>
+						</li>
+						<hr />
+						<li class="w-full hover:bg-[#B5C18E]">
+							<a href="" class="w-full h-full p-3 block hover:text-white"
+								>Wishlists</a
+							>
+						</li>
+						<hr />
+						<li class="w-full hover:bg-[#B5C18E]">
+							<a href="" class="w-full h-full p-3 block hover:text-white"
+								>Setting</a
+							>
+						</li>
+						<hr />
+						<li class="w-full hover:bg-[#B5C18E]">
+							<a href="" class="w-full h-full p-3 block hover:text-white"
+								>Log Out</a
+							>
 						</li>
 					</ul>
 				</nav>
 			</nav>
 		</header>
+
+		<!-- This is main section. -->
+		<main>
+			<!-------------------- mobile display -------------------->
+			<div class="flex flex-col m-[1rem] lg:flex-row lg:justify-center">
+				<!-- Hero section -->
+				<section class="relative">
+					<!-- 				<picture>
+					<img
+						class="h-[500px]"
+						src="images/Cart-hero-image 1.png"
+						alt="Banner"
+					/>
+				</picture>
+				<article
+					class="absolute top-0 flex flex-col justify-center gap-4 p-8 bg-black/50 w-full md:bg-[#B5C18E] md:top-auto md:bottom-10 md:right-10 md:w-2/5 md:min-h-1/2 md:rounded-3xl"
+				>
+					<h1 class="text-[#B5C18E] md:text-neutral-700">
+						Discover Our New Collection
+					</h1>
+					<p class="hidden md:flex text-xl">
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+					</p>
+					<a
+						href="shop.html"
+						class="hidden md:flex justify-center bg-orange-100 p-3 w-1/2 text-xl font-semibold hover:bg-orange-200"
+					>
+						Buy Now
+					</a>
+				</article> -->
+				</section>
+				<section id="user_profile" class="lg:w-1/2">
+					<article id="persanal">
+						<div
+							id="head_personl"
+							class="flex flex-col items-start mb-[1.5rem]"
+						>
+							<h2 class="my-[1rem]">Billing details</h2>
+							<h3 class="text-[#b99470]">Personal information</h3>
+							<div class="information flex">
+								<input type="checkbox" id="information" class="text-gray-950" />
+								<p class="">Same info. as your account</p>
+							</div>
+						</div>
+						<details id="details_profile" class="flex flex-col gap-y-[1rem]">
+							<summary>Name</summary>
+							<div id="user_name" class="flex">
+								<div class="frist_name">
+									<h4>First Name</h4>
+									<input
+										type="text"
+										id="frist_input"
+										class="border border-[#111110] rounded-[12px] mr-2"
+									/>
+								</div>
+								<div class="last_name">
+									<h4>Lest Name</h4>
+									<input
+										type="text"
+										id="last_input"
+										class="border border-[#111110] rounded-[12px] mr-2"
+									/>
+								</div>
+							</div>
+							<div id="phone">
+								<h4>Phone</h4>
+								<input
+									type="tel"
+									class="phone border border-[#111110] rounded-[12px]"
+								/>
+							</div>
+							<div id="email">
+								<h4>Email Address</h4>
+								<input
+									type="email"
+									class="phone border border-[#111110] rounded-[12px]"
+								/>
+							</div>
+							<div id="company">
+								<h4>Company Name(Optional)</h4>
+								<input
+									type="text"
+									class="phone border border-[#111110] max-[15rem] rounded-[12px]"
+								/>
+							</div>
+						</details>
+						<br />
+					</article>
+					<article id="user_contact">
+						<div
+							id="head_contact"
+							class="flex flex-col items-start mb-[1.5rem]"
+						>
+							<h3 class="text-[#b99470]">Address</h3>
+							<div id="information" class="flex">
+								<input type="checkbox" id="information" />
+								<p class="">Same address as your account</p>
+							</div>
+						</div>
+						<details id="detils_contact" class="flex flex-col gap-y-[2rem]">
+							<summary>Address</summary>
+							<div id="country">
+								<h4>Country / Region</h4>
+								<input
+									type="text"
+									class="phone border border-[#111110] rounded-[12px]"
+								/>
+							</div>
+							<div id="street_address">
+								<h4>Street address</h4>
+								<input
+									type="text"
+									class="phone border border-[#111110] rounded-[12px]"
+								/>
+							</div>
+							<div id="city">
+								<h4>Town / City</h4>
+								<input
+									type="text"
+									class="phone border border-[#111110] max-[15rem] rounded-[12px]"
+								/>
+							</div>
+							<div id="province">
+								<h4>Province</h4>
+								<input
+									type="text"
+									class="phone border border-[#111110] max-[15rem] rounded-[12px]"
+								/>
+							</div>
+							<div id="zip_code">
+								<h4>ZIP code</h4>
+								<input
+									type="text"
+									class="phone border border-[#111110] max-[15rem] rounded-[12px]"
+								/>
+							</div>
+						</details>
+						<br />
+					</article>
+				</section>
+				<section
+					id="checkout_product"
+					class="flex flex-col lg:items-center lg:w-1/2"
+				>
+					<figure>
+						<input
+							type="image"
+							id="image_product"
+							art="product"
+							src="/project_html_css/images/10395680_m1 (1).jpg"
+							class="lg:w-3/5 w-2/5"
+						/>
+					</figure>
+					<div id="price" class="flex flex-col justify-between w-full">
+						<div class="flex justify-between">
+							<h2>Product</h2>
+							<h2>Subtotal</h2>
+						</div>
+						<ul id="total_price">
+							<li class="flex justify-between">
+								<span>Name_Product x1</span><span>999 Baht</span>
+							</li>
+							<li class="flex justify-between">
+								<span>7% Tax</span><span>70 Baht</span>
+							</li>
+							<li class="flex justify-between">
+								<span>Subtotal</span><span>1069 Baht</span>
+							</li>
+							<li class="flex justify-between">
+								<span>Total</span><span>1069 Baht</span>
+							</li>
+						</ul>
+					</div>
+					<br />
+					<section>
+						<h4>Direct Bank Transfer</h4>
+						<article>
+							<p>
+								Make your payment directly into our bank account. Please use
+								your Order ID as the payment reference. Your order will not be
+								shipped until the funds have cleared in our account.
+							</p>
+						</article>
+						<br />
+						<article>
+							<aside>
+								<input type="radio" id="qr_code" class="" />
+								<span>Direct Bank Transfer/QR Code</span>
+								<div id="qrCode" class="flex flex-col w-60">
+									<!-- <summary></summary> -->
+									<button
+										id="kBank"
+										class="flex items-center bg-[#138f2d] text-[#ffff] p-1.5 my-1"
+									>
+										<img
+											src="/project_html_css/Logo_Banks/kbank.svg "
+											class="w-10"
+										/>
+										<p class="ml-2">Kasikorn</p>
+									</button>
+									<button
+										id="ktb"
+										class="flex items-center bg-[#009cd9] text-[#ffff] p-1.5 my-1"
+									>
+										<img
+											src="/project_html_css/Logo_Banks/ktb.svg "
+											class="w-10 ]"
+										/>
+										<p class="ml-2">Krungthai</p>
+									</button>
+									<button
+										id="bbl"
+										class="flex items-center bg-[#1f4397] text-[#ffff] p-1.5 my-1"
+									>
+										<img
+											src="/project_html_css/Logo_Banks/bbl.svg "
+											class="w-10 ]"
+										/>
+										<p class="ml-2">Siam Commericial</p>
+									</button>
+									<button
+										id="scb"
+										class="flex items-center bg-[#4e2a82] text-[#ffff] p-1.5 my-1"
+									>
+										<img
+											src="/project_html_css/Logo_Banks/scb.svg "
+											class="w-10 ]"
+										/>
+										<p class="ml-2">TMB Thanacgart</p>
+									</button>
+									<button
+										id="ttb"
+										class="flex items-center bg-[#0050f0] text-[#ffff] p-1.5 my-1"
+									>
+										<img
+											src="/project_html_css/Logo_Banks/ttb.svg "
+											class="w-10 ]"
+										/>
+										<p class="ml-2">Krungthai</p>
+									</button>
+									<button
+										id="qrCode"
+										class="flex items-center bg-[#dadada] text-[#ffff] p-1.5 my-1"
+									>
+										<img src="" class="w-10 ]" />
+										<p class="ml-2">QR Code</p>
+									</button>
+								</div>
+							</aside>
+							<aside>
+								<input type="radio" id="pay_card" class="" />
+								<span>Pay with card</span>
+								<div>
+									<summary></summary>
+									<div id="card" class="my-1">
+										<h4>Please select a card</h4>
+										<input
+											type="text"
+											class="border border-[#111110] rounded-[12px]"
+											placeholder=" Visa"
+										/>
+									</div>
+									<div id="cardNumber" class="my-1">
+										<h4>Card Number</h4>
+										<input
+											type="text"
+											class="border border-[#111110] rounded-[12px]"
+										/>
+									</div>
+									<div id="expiration" class="my-1">
+										<h4>Expiration Date</h4>
+										<div class="flex">
+											<input
+												type="month"
+												class="border border-[#111110] rounded-[12px]"
+											/>
+										</div>
+									</div>
+									<div id="SecurityCode" class="my-1">
+										<h4>Security Code</h4>
+										<input
+											type="text"
+											class="border border-[#111110] rounded-[12px]"
+										/>
+									</div>
+									<figure class="flex gap-3">
+										<img
+											src="/project_html_css/Logo_Banks/pngegg.png"
+											class="h-20 w-20"
+										/>
+										<img
+											src="/project_html_css/Logo_Banks/pngegg (1).png"
+											class="h-20 w-20"
+										/>
+										<img
+											src="/project_html_css/Logo_Banks/pngegg (2).png"
+											class="h-20 w-20"
+										/>
+									</figure>
+								</div>
+							</aside>
+							<aside>
+								<input type="radio" id="delivery" class="" />
+								<span>Cash On Delivery</span>
+							</aside>
+						</article>
+						<br />
+						<article>
+							<p>
+								Your personal data will be used to support your experience
+								throughout this website, to manage access to your account, and
+								for other purposes described in our privacy policy.
+							</p>
+						</article>
+					</section>
+				</section>
+			</div>
+		</main>
 	</body>
 </html>

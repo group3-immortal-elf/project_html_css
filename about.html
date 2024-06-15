@@ -36,6 +36,9 @@
 					@apply text-2xl;
 					@apply font-semibold;
 				}
+				h4 {
+					@apply font-semibold;
+				}
 				img {
 					@apply w-full;
 					@apply object-cover;
@@ -60,15 +63,17 @@
 		/>
 	</head>
 
-	<body class="font-[Montserrat] text-neutral-700 text-lg bg-white">
-		<!-- This is header. -->
-		<header class="text-xl">
-			<nav class="flex justify-between items-center px-5 h-16">
+	<body id="body" class="font-[Montserrat] text-neutral-700 text-lg bg-white">
+		<!-------------------- header -------------------->
+		<header class="text-xl sticky top-0 z-50">
+			<nav
+				class="flex justify-between items-center px-5 h-16 border-b bg-white"
+			>
 				<!-------------------- logo -------------------->
 				<a class="flex items-center gap-4" href="index.html">
-					<picture class="w-12"
-						><img src="images/elviro logo.svg" alt="Logo"
-					/></picture>
+					<picture class="w-12">
+						<img src="images/elviro logo.svg" alt="Logo" />
+					</picture>
 					<h3>Elviro</h3>
 				</a>
 
@@ -77,7 +82,7 @@
 				<nav class="md:hidden">
 					<ul class="flex items-center gap-5">
 						<li>
-							<button><i class="fa-solid fa-magnifying-glass"></i></button>
+							<a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
 						</li>
 						<li id="mobile-toggle-open" class="">
 							<button onclick="showNav('sub-mobile-nav'), toggleMobileNav()">
@@ -95,18 +100,19 @@
 				<!-- sub -->
 				<nav
 					id="sub-mobile-nav"
-					class="absolute top-16 left-0 z-50 w-full hidden"
+					class="absolute top-16 left-0 z-50 w-full hidden overflow-y-scroll h-[calc(100vh-64px)]"
 				>
 					<ul class="w-full bg-white text-center">
 						<li class="border-b">
+							<a href="shop.html" class="block w-full p-3">For Kids</a>
+						</li>
+
+						<li class="border-b">
 							<button onclick="showNav('room-nav')" class="w-full p-3">
-								Rooms
+								Room
 							</button>
 						</li>
 						<ul id="room-nav" class="hidden bg-neutral-100">
-							<li class="border-b">
-								<a href="shop.html" class="block w-full p-3">All Rooms</a>
-							</li>
 							<li class="border-b">
 								<a href="shop.html" class="block w-full p-3">BedRoom</a>
 							</li>
@@ -120,12 +126,12 @@
 
 						<li class="border-b">
 							<button onclick="showNav('product-nav')" class="w-full p-3">
-								Products
+								Product
 							</button>
 						</li>
 						<ul id="product-nav" class="hidden bg-neutral-100">
 							<li class="border-b">
-								<a href="shop.html" class="block w-full p-3">All Products</a>
+								<a href="shop.html" class="block w-full p-3">All Product</a>
 							</li>
 							<li class="border-b">
 								<a href="shop.html" class="block w-full p-3">Beds</a>
@@ -159,11 +165,21 @@
 				<!-------------------- desktop nav -------------------->
 				<nav class="hidden md:flex h-full w-full">
 					<ul class="flex justify-center h-full w-full">
+						<!-- for kid -->
+						<li class="h-full hover:bg-[#B5C18E]">
+							<a
+								href="shop.html"
+								class="flex justify-center items-center h-full px-6 hover:text-white"
+							>
+								For Kids
+							</a>
+						</li>
+
 						<!-- room -->
 						<li class="h-full hover:bg-[#B5C18E]">
 							<a
 								href="shop.html"
-								class="flex justify-center items-center h-full px-6"
+								class="flex justify-center items-center h-full px-6 hover:text-white"
 								onmouseenter="showNav('sub-room')"
 								onmouseleave="showNav('sub-room')"
 							>
@@ -171,16 +187,17 @@
 							</a>
 							<nav
 								id="sub-room"
-								class="hidden absolute top-16 left-0 z-50 w-full"
+								class="hidden absolute top-16 left-0 z-49 w-full"
 							>
 								<ul
-									class="flex justify-center gap-32 bg-white px-14 py-6 m-auto w-fit border"
+									class="flex justify-center gap-32 bg-white px-14 py-6 m-auto w-fit border border-t-0"
 									onmouseenter="showNav('sub-room')"
 									onmouseleave="showNav('sub-room')"
 								>
 									<li class="flex flex-col gap-4">
 										<a
-											href="shop.html"
+											href="shop
+											"
 											class="font-semibold border-b border-neutral-300 hover:text-[#939d73]"
 										>
 											Bedroom
@@ -188,7 +205,8 @@
 										<ul class="flex flex-col gap-4">
 											<li>
 												<a
-													href="shop.html"
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Beds
@@ -196,7 +214,8 @@
 											</li>
 											<li>
 												<a
-													href="shop.html"
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Bedside Tables
@@ -204,7 +223,8 @@
 											</li>
 											<li>
 												<a
-													href="shop.html"
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Wardrobes
@@ -212,7 +232,8 @@
 											</li>
 											<li>
 												<a
-													href="shop.html"
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Drawers
@@ -220,7 +241,8 @@
 											</li>
 											<li>
 												<a
-													href="shop.html"
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Dressing Tables
@@ -230,7 +252,8 @@
 									</li>
 									<li class="flex flex-col gap-4">
 										<a
-											href="shop.html"
+											href="shop
+											"
 											class="font-semibold border-b border-neutral-300 hover:text-[#939d73]"
 										>
 											Living Room
@@ -238,7 +261,8 @@
 										<ul class="flex flex-col gap-4">
 											<li>
 												<a
-													href="shop.html"
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Sofas
@@ -246,7 +270,8 @@
 											</li>
 											<li>
 												<a
-													href="shop.html"
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													TV Benches
@@ -254,7 +279,8 @@
 											</li>
 											<li>
 												<a
-													href="shop.html"
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Coffee Tables
@@ -262,7 +288,8 @@
 											</li>
 											<li>
 												<a
-													href="shop.html"
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Bookcases
@@ -270,7 +297,8 @@
 											</li>
 											<li>
 												<a
-													href="shop.html"
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Cabinets
@@ -278,7 +306,8 @@
 											</li>
 											<li>
 												<a
-													href="shop.html"
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Desks
@@ -286,7 +315,8 @@
 											</li>
 											<li>
 												<a
-													href="shop.html"
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Shoe Cabinets
@@ -296,7 +326,8 @@
 									</li>
 									<li class="flex flex-col gap-4">
 										<a
-											href="shop.html"
+											href="shop
+											"
 											class="font-semibold border-b border-neutral-300 hover:text-[#939d73]"
 										>
 											Kitchen
@@ -304,7 +335,8 @@
 										<ul class="flex flex-col gap-4">
 											<li>
 												<a
-													href="shop.html"
+													href="shop
+													"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
 													Dining Tables
@@ -320,7 +352,7 @@
 						<li class="h-full hover:bg-[#B5C18E]">
 							<a
 								href="shop.html"
-								class="flex justify-center items-center h-full px-6"
+								class="flex justify-center items-center h-full px-6 hover:text-white"
 								onmouseenter="showNav('sub-product')"
 								onmouseleave="showNav('sub-product')"
 							>
@@ -328,12 +360,12 @@
 							</a>
 							<nav
 								id="sub-product"
-								class="hidden absolute top-16 left-0 z-50 w-full"
+								class="hidden absolute top-16 left-0 z-49 w-full"
 								onmouseenter="showNav('sub-product')"
 								onmouseleave="showNav('sub-product')"
 							>
 								<ul
-									class="flex justify-center gap-32 bg-white px-14 py-6 m-auto w-fit border"
+									class="flex justify-center gap-32 bg-white px-14 py-6 m-auto w-fit border border-t-0"
 								>
 									<li class="flex flex-col gap-4">
 										<a
@@ -398,7 +430,7 @@
 													href="shop.html"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
-													Dining Table
+													Dining Tables
 												</a>
 											</li>
 										</ul>
@@ -416,7 +448,7 @@
 													href="shop.html"
 													class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
 												>
-													Sofa
+													Sofas
 												</a>
 											</li>
 											<li>
@@ -513,7 +545,7 @@
 						<li class="h-full hover:bg-[#B5C18E]">
 							<a
 								href="about.html"
-								class="flex justify-center items-center h-full px-6"
+								class="flex justify-center items-center h-full px-6 hover:text-white"
 							>
 								About Us
 							</a>
@@ -523,18 +555,191 @@
 
 				<!-- desktop icon nav -->
 				<nav class="hidden md:flex">
-					<ul class="flex gap-6">
+					<ul class="flex items-center gap-6">
 						<li>
-							<button><i class="fa-solid fa-magnifying-glass"></i></button>
+							<i class="fa-solid fa-magnifying-glass"></i>
 						</li>
 						<li>
-							<a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+							<a
+								href="cart.html"
+								onmouseenter="showNav('cart-nav')"
+								onmouseleave="showNav('cart-nav')"
+							>
+								<i class="fa-solid fa-cart-shopping"></i>
+							</a>
 						</li>
 						<li>
-							<a href=""><i class="fa-regular fa-heart"></i></a>
+							<button onclick="showNav('profile-nav')">
+								<i class="fa-regular fa-user"></i>
+							</button>
 						</li>
-						<li>
-							<a href=""><i class="fa-regular fa-user"></i></a>
+					</ul>
+				</nav>
+
+				<!-- cart nav -->
+				<nav
+					id="cart-nav"
+					onmouseenter="showNav('cart-nav')"
+					onmouseleave="showNav('cart-nav')"
+					class="hidden fixed top-0 right-12 z-50 w-12 h-16 text-base"
+				>
+					<div class="fixed top-16 right-0 w-96 border border-t-0 bg-white">
+						<h3 class="p-5">Shopping Cart</h3>
+
+						<hr class="mx-4" />
+
+						<ul class="h-80 overflow-y-scroll">
+							<li class="flex items-center gap-4 p-4">
+								<input
+									type="checkbox"
+									name="checkbox"
+									id="product.id"
+									class="h-5 w-5"
+								/>
+								<picture class="rounded-xl w-1/4">
+									<img
+										src="images/Cart-hero-image 1.png"
+										alt="thumbnail"
+										class="aspect-square"
+									/>
+								</picture>
+								<div
+									id="productInfo"
+									class="flex flex-col w-2/3 justify-center items-start"
+								>
+									<h4>Sofaaaaaa</h4>
+									<p>1 x price</p>
+								</div>
+								<button class="text-[#B5C18E] h-fit text-xl">
+									<i class="fa-solid fa-circle-xmark"></i>
+								</button>
+							</li>
+
+							<li class="flex items-center gap-4 p-4">
+								<input
+									type="checkbox"
+									name="checkbox"
+									id="product.id"
+									class="h-5 w-5"
+								/>
+								<picture class="rounded-xl w-1/4">
+									<img
+										src="images/Cart-hero-image 1.png"
+										alt="thumbnail"
+										class="aspect-square"
+									/>
+								</picture>
+								<div
+									id="productInfo"
+									class="flex flex-col w-2/3 justify-center items-start"
+								>
+									<h4>Sofaaaaaa</h4>
+									<p>1 x price</p>
+								</div>
+								<button class="text-[#B5C18E] h-fit text-xl">
+									<i class="fa-solid fa-circle-xmark"></i>
+								</button>
+							</li>
+
+							<li class="flex items-center gap-4 p-4">
+								<input
+									type="checkbox"
+									name="checkbox"
+									id="product.id"
+									class="h-5 w-5"
+								/>
+								<picture class="rounded-xl w-1/4">
+									<img
+										src="images/Cart-hero-image 1.png"
+										alt="thumbnail"
+										class="aspect-square"
+									/>
+								</picture>
+								<div
+									id="productInfo"
+									class="flex flex-col w-2/3 justify-center items-start"
+								>
+									<h4>Sofaaaaaa</h4>
+									<p>1 x price</p>
+								</div>
+								<button class="text-[#B5C18E] h-fit text-xl">
+									<i class="fa-solid fa-circle-xmark"></i>
+								</button>
+							</li>
+
+							<li class="flex items-center gap-4 p-4">
+								<input
+									type="checkbox"
+									name="checkbox"
+									id="product.id"
+									class="h-5 w-5"
+								/>
+								<picture class="rounded-xl w-1/4">
+									<img
+										src="images/Cart-hero-image 1.png"
+										alt="thumbnail"
+										class="aspect-square"
+									/>
+								</picture>
+								<div
+									id="productInfo"
+									class="flex flex-col w-2/3 justify-center items-start"
+								>
+									<h4>Sofaaaaaa</h4>
+									<p>1 x price</p>
+								</div>
+								<button class="text-[#B5C18E] h-fit text-xl">
+									<i class="fa-solid fa-circle-xmark"></i>
+								</button>
+							</li>
+						</ul>
+
+						<div class="">
+							<div class="flex justify-between p-4">
+								<h4 class="">Subtotal</h4>
+								<p>999,999</p>
+							</div>
+							<hr />
+							<div class="flex p-4 gap-4">
+								<button class="bg-[#B5C18E] text-white p-2 w-1/2 rounded-full">
+									Checkout
+								</button>
+								<button class="bg-[#B5C18E] text-white p-2 w-1/2 rounded-full">
+									Comparison
+								</button>
+							</div>
+						</div>
+					</div>
+				</nav>
+
+				<!-- profile nav -->
+				<nav
+					id="profile-nav"
+					class="hidden fixed top-16 right-0 z-49 text-center bg-white"
+				>
+					<ul class="w-40 h-full border border-t-0">
+						<li class="w-full hover:bg-[#B5C18E]">
+							<a href="" class="w-full h-full p-3 block hover:text-white"
+								>Profile</a
+							>
+						</li>
+						<hr />
+						<li class="w-full hover:bg-[#B5C18E]">
+							<a href="" class="w-full h-full p-3 block hover:text-white"
+								>Wishlists</a
+							>
+						</li>
+						<hr />
+						<li class="w-full hover:bg-[#B5C18E]">
+							<a href="" class="w-full h-full p-3 block hover:text-white"
+								>Setting</a
+							>
+						</li>
+						<hr />
+						<li class="w-full hover:bg-[#B5C18E]">
+							<a href="" class="w-full h-full p-3 block hover:text-white"
+								>Log Out</a
+							>
 						</li>
 					</ul>
 				</nav>
@@ -543,34 +748,113 @@
 
 		<!-- This is main section. -->
 		<main>
-			<section id="banner">
+			<!-- Banner section -->
+			<section id="banner ">
+				<div class="relative">
 				<img
 					class="object-cover h-[500px]"
 					src="./images/Cart-hero-image 1.png"
 				/>
-				<h1></h1>
+				<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+					<h1 class="text-black">About</h1>
+				</div>
+				</div>
 			</section>
 
-			<section id="content">
-				<article class="text-left py-[50px] px-[100px] text-3xl">
-					<div id="logo" class="flex">
-						<img src="./images/elviro logo.svg" class="h-[250px] "
-						<h2>Elviro</h2>
-						<caption class>"We care about your family"</caption>
+			<!-- Content section -->
+			<section id="content" class="ml-[95px] mr-[56px] my-[66px]">
+				<div class="flex justify-center gap-5 mb-8">
+					<div class="min-w-[140px] w-[140px] md:w-[160px] ">
+						<img src="./images/elviro logo.svg" alt="Elviro Logo" />
 					</div>
-
-					<p>
-						Furniture is mor than just furniture. We understand how meaningful
-						it can be to your growing family. <span class="">Elviro</span> is
-						derived from an elf, a magical in a fantasy fairytale and
-						environment. We are here to make your experience of shopping
-						magical.
+					<div id="brandCaption" class="flex-col content-center content">
+						<h2 class="text-[50px] md:text-[80px] mb-3 text-left">Elviro</h2>
+						<p class="text-xl md:text-2xl italic font-normal">
+							"We care about your family"
+						</p>
+					</div>
+				</div>
+				<div id="textContent" class="text-lg">
+					<p class="mb-5"> 
+						Furniture is more than just furniture. We understand how meaningful
+						it can be to your growing family. <b>Elviro</b> is derived from an <i>elf</i>, a
+						magical in a fantasy fairytale and <i>environment</i>. We are here to make
+						your experience of shopping magical.
 					</p>
-				</article>
+					<p class="mb-5">
+						Not only is our furniture environmentally friendly, and safe for
+						everyone. But we aim to make it suited for all the stages of your
+						family. That’s the motto of Ms. Elvira Yuri, CEO and founder of
+						Elviro.
+					</p>
+					<p class="mb-5">
+						At Elviro, you will find all the furniture for all tastes, which
+						will make shopping enjoyable, and using them even more magical.
+					</p>
+				</div>
 			</section>
 		</main>
 
 		<!-- This is footer. -->
-		<footer></footer>
+		<footer>
+			<footer
+			class="flex flex-col gap-4 p-4 md:py-8 md:px-20 border-t border-[#B5C18E]"
+		>
+			<div class="hidden md:flex gap-36">
+				<ul class="flex flex-col gap-8">
+					<li><h3>Elviro.</h3></li>
+					<li class="text-neutral-400">Bangkok, Thailand</li>
+				</ul>
+
+				<ul class="flex flex-col gap-4">
+					<li class="text-neutral-400 mb-4">Links</li>
+					<li class="hover:text-[#939d73] hover:underline decoration-[#939d73]">
+						<a href="index.html">Home</a>
+					</li>
+					<li class="hover:text-[#939d73] hover:underline decoration-[#939d73]">
+						<a href="shop.html">Shop</a>
+					</li>
+					<li class="hover:text-[#939d73] hover:underline decoration-[#939d73]">
+						<a href="about.html">About</a>
+					</li>
+					<li class="hover:text-[#939d73] hover:underline decoration-[#939d73]">
+						<a href="">Contact</a>
+					</li>
+				</ul>
+
+				<ul class="flex flex-col gap-4">
+					<li class="text-neutral-400 mb-4">Help</li>
+					<li class="hover:text-[#939d73] hover:underline decoration-[#939d73]">
+						<a href="index.html">Payment Options</a>
+					</li>
+					<li class="hover:text-[#939d73] hover:underline decoration-[#939d73]">
+						<a href="shop.html">Returns</a>
+					</li>
+					<li class="hover:text-[#939d73] hover:underline decoration-[#939d73]">
+						<a href="about.html">Privacy Policies</a>
+					</li>
+				</ul>
+
+				<ul class="lg:flex flex-col gap-4 hidden">
+					<li class="text-neutral-400 mb-1">Newsletter</li>
+					<li>
+						<form class="flex flex-col xl:flex-row items-start gap-4">
+							<input
+								type="email"
+								placeholder="Enter Your Email Address"
+								class="border-b border-neutral-700 text-base w-60 text-ellipsis"
+							/>
+							<button
+								type="submit"
+								class="hover:text-[#939d73] hover:underline decoration-[#939d73]"
+							>
+								SUBSCRIBE
+							</button>
+						</form>
+					</li>
+				</ul>
+			</div>
+			<p>&copy; 2024 Elviro. All rights reserved.</p>
+		</footer>
 	</body>
 </html>

@@ -24,19 +24,24 @@
 		<style type="text/tailwindcss">
 			@layer base {
 				h1 {
-					@apply text-5xl font-semibold;
+					@apply text-5xl;
+					@apply font-semibold;
 				}
 				h2 {
-					@apply text-4xl font-semibold text-center;
+					@apply text-4xl;
+					@apply font-semibold;
+					@apply text-center;
 				}
 				h3 {
-					@apply text-2xl font-semibold;
+					@apply text-2xl;
+					@apply font-semibold;
 				}
 				h4 {
 					@apply font-semibold;
 				}
 				img {
-					@apply w-full object-cover;
+					@apply w-full;
+					@apply object-cover;
 				}
 				picture {
 					@apply overflow-hidden;
@@ -836,229 +841,193 @@
 		</header>
 
 		<!-------------------- main -------------------->
-		<main>
-			<!-- Hero section -->
-			<section class="relative">
-				<picture>
-					<img
-						class="h-[500px]"
-						src="images/Cart-hero-image 1.png"
-						alt="Banner"
-					/>
-				</picture>
-				<article
-					class="absolute top-0 flex flex-col justify-center gap-4 p-8 bg-black/50 w-full md:bg-[#B5C18E] md:top-auto md:bottom-10 md:right-10 md:w-2/5 md:min-h-1/2 md:rounded-3xl"
-				>
-					<h1 class="text-[#B5C18E] md:text-neutral-700">
-						Discover Our New Collection
-					</h1>
-					<p class="hidden md:flex text-xl">
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-					</p>
-					<a
-						href="shop.html"
-						class="hidden md:flex justify-center bg-orange-100 p-3 w-1/2 text-xl font-semibold hover:bg-orange-200 rounded"
-					>
-						Buy Now
-					</a>
-				</article>
-			</section>
+		<main class="flex flex-col items-center gap-10 bg-[#B5C18E] py-10">
+			<h1 class="w-11/12 xl:w-4/5 justify-start">My Account</h1>
 
-			<!-- Room section -->
-			<section class="flex flex-col items-center gap-6 p-6 md:p-12">
-				<h2>Browse By Room</h2>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-				<div
-					class="flex gap-8 w-full p-3 pb-8 overflow-x-scroll md:overflow-auto"
+			<section class="flex flex-col lg:flex-row gap-8 w-11/12 xl:w-4/5">
+				<!---------- profile nav ---------->
+				<section
+					class="flex flex-row lg:flex-col justify-center lg:justify-start items-center gap-8 lg:w-2/5 xl:w-1/4"
 				>
-					<a href="shop.html" class="flex flex-col items-center gap-4 min-w-52">
-						<picture
-							class="rounded-3xl hover:shadow-[0_0_10px_1px_rgb(150,150,150)]"
-						>
-							<img
-								src="images/Cart-hero-image 1.png"
-								alt="Bedroom"
-								class="hover:scale-110 hover:duration-500"
-							/>
-						</picture>
-						<h3>Bedroom</h3>
-					</a>
-					<a href="shop.html" class="flex flex-col items-center gap-4 min-w-52">
-						<picture
-							class="rounded-3xl hover:shadow-[0_0_10px_1px_rgb(150,150,150)]"
-						>
-							<img
-								src="images/Cart-hero-image 1.png"
-								alt="Living Room"
-								class="hover:scale-110 hover:duration-500"
-							/>
-						</picture>
-						<h3>Living Room</h3>
-					</a>
-					<a href="shop.html" class="flex flex-col items-center gap-4 min-w-52">
-						<picture
-							class="rounded-3xl hover:shadow-[0_0_10px_1px_rgb(150,150,150)]"
-						>
-							<img
-								src="images/Cart-hero-image 1.png"
-								alt="Kitchen"
-								class="hover:scale-110 hover:duration-500"
-							/>
-						</picture>
-						<h3>Kitchen</h3>
-					</a>
-				</div>
-			</section>
+					<picture class="w-1/2 h-1/2 lg:h-auto xl:w-2/3">
+						<img
+							src="images/10395680_m1 (1).jpg"
+							alt="Profile Image"
+							class="rounded-full"
+						/>
+					</picture>
 
-			<hr class="hidden md:flex border-[#B5C18E] mx-16" />
+					<nav class="hidden sm:flex bg-white p-4 rounded-3xl w-full">
+						<ul class="flex flex-col gap-2">
+							<li class="rounded-full">
+								<a
+									href="profile.html"
+									class="block h-full px-4 py-2 rounded-full hover:bg-orange-200"
+								>
+									Profile
+								</a>
+							</li>
+							<li class="rounded-full">
+								<a
+									href="profile_account.html"
+									class="block h-full px-4 py-2 rounded-full hover:bg-orange-200"
+								>
+									Account
+								</a>
+							</li>
+							<li class="rounded-full">
+								<a
+									href="profile_payment.html"
+									class="block h-full px-4 py-2 rounded-full hover:bg-orange-200"
+								>
+									Payment
+								</a>
+							</li>
+							<li class="rounded-full">
+								<a
+									href="profile_history.html"
+									class="block h-full px-4 py-2 rounded-full hover:bg-orange-200"
+								>
+									Purchase History
+								</a>
+							</li>
+							<li class="rounded-full">
+								<a
+									href="profile_wishist.html"
+									class="block h-full px-4 py-2 rounded-full hover:bg-orange-200"
+								>
+									Wishlists
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</section>
 
-			<!-- Product section -->
-			<section class="flex flex-col items-center gap-6 p-4 md:p-12">
-				<h2>Our Product</h2>
-				<div class="grid grid-cols-2 lg:grid-cols-4 pt-4 gap-4 md:gap-6">
-					<a
-						href="single_product.html"
-						class="bg-[#b9c590]/80 rounded-lg overflow-hidden hover:shadow-[0_0_10px_1px_rgb(150,150,150)]"
-					>
-						<picture class="aspect-square">
-							<img
-								src="images/Cart-hero-image 1.png"
-								alt=""
-								class="aspect-square"
-							/>
-						</picture>
-						<article class="flex flex-col gap-2 p-4">
-							<h3>Name</h3>
-							<p>Description</p>
-							<p>Price</p>
-						</article>
-					</a>
-					<a
-						href="single_product.html"
-						class="bg-[#b9c590]/80 rounded-lg overflow-hidden hover:shadow-[0_0_10px_1px_rgb(150,150,150)]"
-					>
-						<picture class="aspect-square">
-							<img
-								src="images/Cart-hero-image 1.png"
-								alt=""
-								class="aspect-square"
-							/>
-						</picture>
-						<article class="flex flex-col gap-2 p-4">
-							<h3>Name</h3>
-							<p>Description</p>
-							<p>Price</p>
-						</article>
-					</a>
-					<a
-						href="single_product.html"
-						class="bg-[#b9c590]/80 rounded-lg overflow-hidden hover:shadow-[0_0_10px_1px_rgb(150,150,150)]"
-					>
-						<picture class="aspect-square">
-							<img
-								src="images/Cart-hero-image 1.png"
-								alt=""
-								class="aspect-square"
-							/>
-						</picture>
-						<article class="flex flex-col gap-2 p-4">
-							<h3>Name</h3>
-							<p>Description</p>
-							<p>Price</p>
-						</article>
-					</a>
-					<a
-						href="single_product.html"
-						class="bg-[#b9c590]/80 rounded-lg overflow-hidden hover:shadow-[0_0_10px_1px_rgb(150,150,150)]"
-					>
-						<picture class="aspect-square">
-							<img
-								src="images/Cart-hero-image 1.png"
-								alt=""
-								class="aspect-square"
-							/>
-						</picture>
-						<article class="flex flex-col gap-2 p-4">
-							<h3>Name</h3>
-							<p>Description</p>
-							<p>Price</p>
-						</article>
-					</a>
-					<a
-						href="single_product.html"
-						class="bg-[#b9c590]/80 rounded-lg overflow-hidden hover:shadow-[0_0_10px_1px_rgb(150,150,150)]"
-					>
-						<picture class="aspect-square">
-							<img
-								src="images/Cart-hero-image 1.png"
-								alt=""
-								class="aspect-square"
-							/>
-						</picture>
-						<article class="flex flex-col gap-2 p-4">
-							<h3>Name</h3>
-							<p>Description</p>
-							<p>Price</p>
-						</article>
-					</a>
-					<a
-						href="single_product.html"
-						class="bg-[#b9c590]/80 rounded-lg overflow-hidden hover:shadow-[0_0_10px_1px_rgb(150,150,150)]"
-					>
-						<picture class="aspect-square">
-							<img
-								src="images/Cart-hero-image 1.png"
-								alt=""
-								class="aspect-square"
-							/>
-						</picture>
-						<article class="flex flex-col gap-2 p-4">
-							<h3>Name</h3>
-							<p>Description</p>
-							<p>Price</p>
-						</article>
-					</a>
-					<a
-						href="single_product.html"
-						class="bg-[#b9c590]/80 rounded-lg overflow-hidden hover:shadow-[0_0_10px_1px_rgb(150,150,150)]"
-					>
-						<picture class="aspect-square">
-							<img
-								src="images/Cart-hero-image 1.png"
-								alt=""
-								class="aspect-square"
-							/>
-						</picture>
-						<article class="flex flex-col gap-2 p-4">
-							<h3>Name</h3>
-							<p>Description</p>
-							<p>Price</p>
-						</article>
-					</a>
-					<a
-						href="single_product.html"
-						class="bg-[#b9c590]/80 rounded-lg overflow-hidden hover:shadow-[0_0_10px_1px_rgb(150,150,150)]"
-					>
-						<picture class="aspect-square">
-							<img
-								src="images/Cart-hero-image 1.png"
-								alt=""
-								class="aspect-square"
-							/>
-						</picture>
-						<article class="flex flex-col gap-2 p-4">
-							<h3>Name</h3>
-							<p>Description</p>
-							<p>Price</p>
-						</article>
-					</a>
-				</div>
-				<a
-					href="shop.html"
-					class="border border-[#b9c590] py-3 px-6 hover:bg-neutral-100 rounded"
+				<!---------- profile content ---------->
+				<section
+					class="bg-white rounded-3xl w-full lg:w-3/5 xl:w-3/4 p-8 xl:py-10 xl:px-16"
 				>
-					Show more
-				</a>
+					<form action="" class="flex flex-col gap-6">
+						<!-- personal info -->
+						<h2 class="text-left">Profile</h2>
+
+						<hr class="my-2 border-[#B5C18E]" />
+
+						<div class="flex flex-col sm:flex-row gap-6">
+							<label class="flex flex-col w-full">
+								First Name
+								<input
+									type="text"
+									class="border border-neutral-300 px-4 py-3 mt-3 rounded-lg"
+									required
+								/>
+							</label>
+							<label class="flex flex-col w-full">
+								Last Name
+								<input
+									type="text"
+									class="border border-neutral-300 px-4 py-3 mt-3 rounded-lg"
+									required
+								/>
+							</label>
+						</div>
+
+						<label class="flex flex-col sm:w-1/2 sm:pr-4">
+							Birthday
+							<input
+								type="date"
+								class="border border-neutral-300 px-4 py-3 mt-3 rounded-lg"
+							/>
+						</label>
+
+						<div class="flex flex-col sm:flex-row gap-6">
+							<label class="flex flex-col w-full">
+								Email
+								<input
+									type="email"
+									class="border border-neutral-300 px-4 py-3 mt-3 rounded-lg"
+									required
+								/>
+							</label>
+							<label class="flex flex-col w-full">
+								Phone
+								<input
+									type="number"
+									class="border border-neutral-300 px-4 py-3 mt-3 rounded-lg"
+									required
+								/>
+							</label>
+						</div>
+
+						<!-- address -->
+						<h2 class="text-left mt-8">Address</h2>
+
+						<hr class="my-2 border-[#B5C18E]" />
+
+						<div class="flex flex-col sm:flex-row gap-6">
+							<label class="flex flex-col w-full">
+								Street Address 1
+								<input
+									type="text"
+									class="border border-neutral-300 px-4 py-3 mt-3 rounded-lg"
+									required
+								/>
+							</label>
+							<label class="flex flex-col w-full">
+								Street Address 2
+								<input
+									type="text"
+									class="border border-neutral-300 px-4 py-3 mt-3 rounded-lg"
+								/>
+							</label>
+						</div>
+
+						<div class="flex flex-col sm:flex-row gap-6">
+							<label class="flex flex-col w-full">
+								Province
+								<input
+									type="text"
+									class="border border-neutral-300 px-4 py-3 mt-3 rounded-lg"
+									required
+								/>
+							</label>
+							<label class="flex flex-col w-full">
+								District
+								<input
+									type="text"
+									class="border border-neutral-300 px-4 py-3 mt-3 rounded-lg"
+									required
+								/>
+							</label>
+						</div>
+
+						<div class="flex flex-col sm:flex-row gap-6">
+							<label class="flex flex-col w-full">
+								Sub District
+								<input
+									type="text"
+									class="border border-neutral-300 px-4 py-3 mt-3 rounded-lg"
+									required
+								/>
+							</label>
+							<label class="flex flex-col w-full">
+								Postal Code
+								<input
+									type="number"
+									class="border border-neutral-300 px-4 py-3 mt-3 rounded-lg"
+									required
+								/>
+							</label>
+						</div>
+
+						<button
+							type="submit"
+							class="py-4 px-6 rounded-xl bg-orange-200 hover:bg-orange-300 mx-auto"
+						>
+							Save Change
+						</button>
+					</form>
+				</section>
 			</section>
 		</main>
 
